@@ -10,6 +10,10 @@
     "codeowners": "codeowners-generator generate",
     "codeowners:check": "codeowners-generator generate --check"
   },
+  "engines": {
+    "node": "21",
+    "npm": "10"
+  },
   "dependencies": {
     "@adguard/aglint": "2.0.6",
     "codeowners-generator": "2.3.1"
