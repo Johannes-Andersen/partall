@@ -11,7 +11,7 @@
     "codeowners:check": "codeowners-generator generate --check"
   },
   "engines": {
-    "node": "21",
+    "node": "21.2.0",
     "npm": "10"
   },
   "dependencies": {
