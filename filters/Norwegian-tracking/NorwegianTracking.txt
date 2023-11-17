@@ -1,0 +1,2 @@
+example.com##.ad
+example.com##.something

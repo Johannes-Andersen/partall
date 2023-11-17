@@ -1,0 +1,16 @@
+# Default codeowners, if no other rules match, this will be used.
+*                                      @/Johannes-Andersen
+
+
+#################################### Generated content - do not edit! ####################################
+# This block has been generated with codeowners-generator (for more information https://github.com/gagoar/codeowners-generator)
+# To re-generate, run `npm run codeowners`. Don't worry, the content outside this block will be kept.
+
+# Rule extracted from filters/Norwegian-ads/CODEOWNERS
+/filters/Norwegian-ads/**/* @/Johannes-Andersen
+# Rule extracted from filters/Norwegian-annoyances/CODEOWNERS
+/filters/Norwegian-annoyances/**/* @/Johannes-Andersen
+# Rule extracted from filters/Norwegian-tracking/CODEOWNERS
+/filters/Norwegian-tracking/**/* @/Johannes-Andersen
+
+#################################### Generated content - do not edit! ####################################
