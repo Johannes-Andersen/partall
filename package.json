@@ -5,7 +5,8 @@
   "author": "Johannes Andersen",
   "description": "This is a filter list specifically made for <a href=\"https://github.com/gorhill/uBlock\">uBlock Origin (uBO)</a> The list is mainly aimed at Norwegian users and websites.",
   "scripts": {
-    "build": "echo \"TODO: create build step\" exit 0",
+    "build": "node tools/build.mjs",
+    "clean": "rm -rf out",
     "lint": "npm run lint:filters && npm run lint:code",
     "lint:filters": "aglint",
     "lint:code": "prettier --check .",

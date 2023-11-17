@@ -22,7 +22,6 @@ It is most likely that the list will work on other browsers and content blockers
 | Norwegian – Ads        |      |        |
 | Norwegian – Tracking   |      |        |
 | Norwegian – Annoyances |      |        |
-| Norwegian – All        |      |        |
 
 ### Policy
 
@@ -56,13 +55,6 @@ If a rule is subject to the list of limitations described below, then it won’t
 
 - This filter list should block all elements that are considered annoying.
 - Examples include; anti-adblock, cookie notices, third-party widgets, in-page pop-ups, email subscription forms, banners with special offers, and aggressively placed social media widgets.
-
-#### **Norwegian – All**
-
-- This filter list is a combination of all the other lists.
-
-The list is automatically generated from the other lists, so it should include all the rules from the other lists.
-So don't use this list if you are using the other lists.
 
 ## Contributing
 

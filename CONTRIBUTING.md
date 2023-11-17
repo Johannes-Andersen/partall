@@ -23,8 +23,8 @@ We use [Node.js](https://nodejs.org/en/) and [npm](https://www.npmjs.com/) to ma
 
 ### Running linting
 
-We use [AGLint](https://github.com/AdguardTeam/AGLint) to lint the adlists, and [prettier](https://prettier.io/) to format everything else.
-If you got VSCode installed, install the recommended extensions to lint the adlists. The recommended extensions are found in `.vscode/extensions.json`.
+We use [AGLint](https://github.com/AdguardTeam/AGLint) to lint the lists, and [prettier](https://prettier.io/) to format everything else.
+If you got VSCode installed, install the recommended extensions to lint the lists. The recommended extensions are found in `.vscode/extensions.json`.
 
 If you don't have VSCode installed, you can run the linter manually by running `npm run lint` in the root of the repository.
 Tip: You can run `npm run lint:fix` to automatically fix some of the linting errors.
@@ -42,7 +42,7 @@ To build the filter lists, run `npm run build` in the root of the repository.
 
 This will create a `out` folder with the built filter list.
 
-If you only want to build a specific filter list, you can run `npm run build -- --adlist=<adlist>`.
+If you only want to build a specific filter list, you can run `npm run build -- --list=<listName>`.
 
 ## Updating the filter lists
 
@@ -66,6 +66,8 @@ To add a new list, create a new folder inside the filters folder. The folder nam
 
 - Groups are used to group filter lists together. For example, all Norwegian lists are grouped together under the `norwegian` group. So when the lists are built, they will be built into a single file called `norwegian-all.txt`.
 - The name is used to identify the purpose of the list. For example, the Norwegian ad list is called `norwegian-ads.txt`.
+- Create the `header.txt` file. This is the metadata that is appended to the top of the `filters.txt` file in the output.
+- Create the `CODEOWNERS` file. This is used to automatically assign reviewers to pull requests.
 
 You should also update the `README.md` file to include the new list. There is also issue templates in the `.github/ISSUE_TEMPLATE` folder that you may should update.
 The maintainers will create the appropriate GitHub tags and GitHub Actions workflows for the new list.
