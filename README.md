@@ -3,6 +3,12 @@
 This is a filter list specifically made for <a href="https://github.com/gorhill/uBlock">uBlock Origin (uBO)</a>
 and is mainly aimed at Norwegian users and websites.
 
+## I have found an issue!
+
+If you have found an issue with the list, please open an issue on GitHub.
+
+You can do that here: https://github.com/Johannes-Andersen/partall/issues/new/choose
+
 ## Disclaimer
 
 <strong>I have only validated the list on the latest version of Firefox and uBO.</strong>
@@ -22,6 +28,11 @@ It is most likely that the list will work on other browsers and content blockers
 
 The lists are a pretty close resemblance of the [adguard filter policy](https://adguard.com/kb/general/ad-filtering/filter-policy).
 But there are some minor differences.
+
+> [!IMPORTANT]  
+> None of the lists are meant to be used as a standalone list. They are meant to be used in combination with other more general lists.
+>
+> We therefore also **do not** deal with any NSFW websites. Report them to the appropriate filter list maintainer instead.
 
 #### **Norwegian – Ads**
 
