@@ -63,10 +63,20 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add -f out/
-          git reset -- . 
-          git checkout -- .
-          git mv out/* .
-          git clean -fdx
+
+          # Checkout the deploy branch
+          git fetch origin deploy:deploy
+          git checkout deploy
+
+          # Remove old files
+          git rm -r *
+
+          # Copy new files from out to root directory
+          cp -r out/* .
+
+          # Add all files to staging
+          git add .
+
+          # Commit and push changes
           git commit -m "Deploying to deploy branch"
           git push origin HEAD:deploy --force
