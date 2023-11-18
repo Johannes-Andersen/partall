@@ -19,11 +19,11 @@ It is most likely that the list will work on other browsers and content blockers
 
 ## Available filter lists
 
-| Name                   | Link | Mirror |
-| ---------------------- | ---- | ------ |
-| Norwegian – Ads        |      |        |
-| Norwegian – Tracking   |      |        |
-| Norwegian – Annoyances |      |        |
+| Name                   | Link                                             | Mirror                                                                                                |
+| ---------------------- | ------------------------------------------------ | ----------------------------------------------------------------------------------------------------- |
+| Norwegian – Ads        | https://list.partall.no/Norwegian-ads.txt        | [GitHub](https://raw.githubusercontent.com/Johannes-Andersen/partall/deploy/Norwegian-ads.txt)        |
+| Norwegian – Tracking   | https://list.partall.no/Norwegian-tracking.txt   | [GitHub](https://raw.githubusercontent.com/Johannes-Andersen/partall/deploy/Norwegian-tracking.txt)   |
+| Norwegian – Annoyances | https://list.partall.no/Norwegian-annoyances.txt | [GitHub](https://raw.githubusercontent.com/Johannes-Andersen/partall/deploy/Norwegian-annoyances.txt) |
 
 ### Policy
 
