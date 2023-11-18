@@ -46,6 +46,8 @@ jobs:
     needs: test
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    permissions:
+      contents: write
 
     steps:
       - name: Checkout
@@ -59,24 +61,9 @@ jobs:
           name: out
           path: out
 
-      - name: Commit and Push
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-
-          # Checkout the deploy branch
-          git fetch origin deploy:deploy
-          git checkout deploy
-
-          # Remove old files
-          git rm -r *
-
-          # Copy new files from out to root directory
-          cp -r out/* .
-
-          # Add all files to staging
-          git add .
-
-          # Commit and push changes
-          git commit -m "Deploying to deploy branch"
-          git push origin HEAD:deploy --force
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: out
+          branch: deploy
+          clean: true
