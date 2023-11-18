@@ -1,3 +1,5 @@
+[![Test](https://github.com/Johannes-Andersen/partall/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/Johannes-Andersen/partall/actions/workflows/test.yml)
+
 # Partall filter lists
 
 This is a filter list specifically made for <a href="https://github.com/gorhill/uBlock">uBlock Origin (uBO)</a>
