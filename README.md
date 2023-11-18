@@ -1,4 +1,4 @@
-[![Test](https://github.com/Johannes-Andersen/partall/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/Johannes-Andersen/partall/actions/workflows/test.yml)
+[![Test & Deploy](https://github.com/Johannes-Andersen/partall/actions/workflows/test-and-deploy.yml/badge.svg?branch=main)](https://github.com/Johannes-Andersen/partall/actions/workflows/test-and-deploy.yml)
 
 # Partall filter lists
 
