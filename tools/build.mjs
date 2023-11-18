@@ -1,6 +1,7 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import { parseArgs } from 'node:util'
+import { execSync } from 'node:child_process'
 
 const {
   values: { list },
@@ -41,10 +42,16 @@ const buildList = (listName) => {
     )
     const formattedDate = lastModified.toISOString()
 
+    // Get the last Git commit hash
+    const gitCommitHash = execSync('git rev-parse --short HEAD')
+      .toString()
+      .trim()
+
     content +=
       fs
         .readFileSync(headerPath, 'utf8')
-        .replace('{{last_modified}}', formattedDate) + '\n'
+        .replace('{{last_modified}}', formattedDate)
+        .replace('{{version}}', gitCommitHash) + '\n'
   }
   content += fs.readFileSync(srcPath, 'utf8')
 
