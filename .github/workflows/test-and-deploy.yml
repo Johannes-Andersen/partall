@@ -1,4 +1,4 @@
-name: Test
+name: Test & Deploy
 
 on:
   push:
@@ -9,8 +9,9 @@ on:
 
 jobs:
   test:
+    name: Test 🧪
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4.1.1
       - uses: actions/setup-node@v4.0.0
@@ -43,9 +44,11 @@ jobs:
           name: out
           path: out/
   deploy:
+    name: Deploy 🚀
     needs: test
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    timeout-minutes: 5
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push' || github.event_name == 'workflow_dispatch'
     permissions:
       contents: write
 
@@ -61,7 +64,7 @@ jobs:
           name: out
           path: out
 
-      - name: Deploy 🚀
+      - name: Deploy to branch
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: out
