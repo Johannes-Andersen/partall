@@ -64,7 +64,7 @@ jobs:
           ref: deploy
 
       - name: Download Artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: out
           path: out
