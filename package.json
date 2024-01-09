@@ -19,7 +19,7 @@
     "npm": "10"
   },
   "dependencies": {
-    "@adguard/aglint": "2.0.6",
+    "@adguard/aglint": "2.0.8",
     "codeowners-generator": "2.3.1",
     "prettier": "3.1.1"
   },
