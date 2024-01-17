@@ -21,7 +21,7 @@
   "dependencies": {
     "@adguard/aglint": "2.0.8",
     "codeowners-generator": "2.4.1",
-    "prettier": "3.2.3"
+    "prettier": "3.2.4"
   },
   "codeowners-generator": {
     "includes": [
