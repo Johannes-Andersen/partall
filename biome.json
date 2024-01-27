@@ -18,6 +18,10 @@
       },
       "suspicious": {
         "noApproximativeNumericConstant": "warn"
+      },
+      "nursery": {
+        "useAwait": "error",
+        "noDuplicateJsonKeys": "error"
       }
     }
   },
@@ -42,7 +46,7 @@
   "javascript": {
     "formatter": {
       "arrowParentheses": "always",
-      "jsxQuoteStyle": "single",
+      "quoteStyle": "single",
       "semicolons": "asNeeded",
       "trailingComma": "all",
       "quoteProperties": "asNeeded",
