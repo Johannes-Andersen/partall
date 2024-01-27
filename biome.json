@@ -6,7 +6,19 @@
   "linter": {
     "enabled": true,
     "rules": {
-      "recommended": true
+      "recommended": true,
+      "correctness": {
+        "noUndeclaredVariables": "error"
+      },
+      "complexity": {
+        "noForEach": "off"
+      },
+      "style": {
+        "noShoutyConstants": "error"
+      },
+      "suspicious": {
+        "noApproximativeNumericConstant": "warn"
+      }
     }
   },
   "files": {
