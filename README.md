@@ -3,7 +3,7 @@
 # Partall filter lists
 
 This is a filter list specifically made for <a href="https://github.com/gorhill/uBlock">uBlock Origin (uBO)</a>
-and is intended for my own personal use. But you are more than welcome to use it as well.
+and is intended for my personal use. But you are more than welcome to use it as well.
 
 ## I have found an issue!
 
@@ -15,7 +15,7 @@ You can do that here: https://github.com/Johannes-Andersen/partall/issues/new/ch
 
 <strong>I have only validated the list on the latest version of Firefox and uBO.</strong>
 
-It is most likely that the list will work on other browsers and content blockers, but I can't guarantee it. I do my best to keep it working for all browsers and adblockers, but I can't test them all. So if you find any issues, please open an GitHub issue.
+The list will most likely work on other browsers and content blockers, but I can't guarantee it. I do my best to keep it working for all browsers and adblockers, but I can't test them all. So, if you find any issues, please open a GitHub issue.
 
 ## Available filter lists
 
@@ -27,13 +27,13 @@ It is most likely that the list will work on other browsers and content blockers
 
 ### Policy
 
-The lists are a pretty close resemblance of the [adguard filter policy](https://adguard.com/kb/general/ad-filtering/filter-policy).
+The list is a pretty close resemblance to the [adguard filter policy](https://adguard.com/kb/general/ad-filtering/filter-policy).
 But there are some minor differences.
 
 > [!IMPORTANT]  
-> None of the lists are meant to be used as a standalone list. They are meant to be used in combination with other more general lists.
+> None of the lists are meant to be used as a standalone list. They are meant to be used in combination with other, more general lists.
 >
-> We therefore also **do not** deal with any NSFW websites. Report them to the appropriate filter list maintainer instead.
+> I also do not deal with NSFW websites. Instead, report them to the appropriate filter list maintainer.
 
 #### **Ads**
 
@@ -42,21 +42,21 @@ But there are some minor differences.
 
 _Limitations and Exceptions_
 
-If a rule is subject to the list of limitations described below, then it won’t be added to the main filters.
+If a rule is subject to the list of limitations described below, it will not be added to the main filters.
 
-- Ads injected by malware or malicious extensions is not in the scope of this filter list.
-- Websites’ own ads should not be added to the ad list, but instead to the annoyances list. However, they should not be unblocked if it may cause third-party ads to reappear.
-- Anti-adblock scripts will be blocked only if they limit or affect the functionality of a website. Otherwise, they will be added to the annoyances list.
+- Ads injected by malware or malicious extensions are not in the scope of this filter list.
+- Websites' own ads should not be added to the ad list, but to the annoyances list. However, they should not be unblocked if doing so may cause third-party ads to reappear.
+- Anti-adblock scripts will be blocked if they limit or affect the functionality of a website. Otherwise, they will be added to the annoyances list.
 
 #### **Tracking**
 
-- This filter will block all trackers that collect user personal, behavior or device data.
-- This includes trackers that claim to only collect anonymous data.
+- This filter will block all trackers that collect user personal, behaviour or device data.
+- This includes trackers that claim only to collect anonymous data.
 
 #### **Annoyances**
 
 - This filter list should block all elements that are considered annoying.
-- Examples include; anti-adblock, cookie notices, third-party widgets, in-page pop-ups, email subscription forms, banners with special offers, and aggressively placed social media widgets.
+- Examples include anti-adblock, cookie notices, third-party widgets, in-page pop-ups, email subscription forms, banners with special offers, and aggressively placed social media widgets.
 
 ## Contributing
 
@@ -68,12 +68,12 @@ This project is licensed under the GNU GPLv3 License - see the [LICENSE](LICENSE
 
 ## Background
 
-During the years I have used a lot of different adblockers and filter lists. But my personal filter list have grown to a point where it is hard to maintain. So I decided to make my own public filter list, so I could share it with others.
+Over the years, I have used many different ad blockers and filter lists. However, my personal filter list has grown to the point where it is hard to maintain across devices and browsers. I, therefore, decided to make this list public so others could use it.
 
-The list is mainly aimed at my own personal use, but I will try to keep it rules that are useful for others as well.
+The list is mainly for my own use, but I will try to include rules that are useful for others as well.
 
 ## Acknowledgments
 
-- [uBlock Origin](https://github.com/gorhill/uBlock) - for creating the adblocker of my choice.
-- [AdGuard](https://adguard.com/) - for amazing documentation, and tools like aglint.
+- [uBlock Origin](https://github.com/gorhill/uBlock) - for creating my chosen adblocker.
+- [AdGuard](https://adguard.com/) - for fantastic documentation and tools like aglint.
 - [DandelionSprout](https://github.com/DandelionSprout/adfilt) - for being my go-to list for years.

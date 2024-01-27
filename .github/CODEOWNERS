@@ -1,5 +1,5 @@
-# Default codeowners, if no other rules match, this will be used.
-*                                      @/Johannes-Andersen
+# Default codeowners: This will be used if no other rules match.
+*                            @/Johannes-Andersen
 
 
 #################################### Generated content - do not edit! ####################################
