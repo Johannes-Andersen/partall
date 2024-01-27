@@ -1,7 +1,7 @@
+import { execSync } from 'node:child_process'
 import fs from 'node:fs'
 import path from 'node:path'
 import { parseArgs } from 'node:util'
-import { execSync } from 'node:child_process'
 
 const {
   values: { list },
@@ -47,11 +47,10 @@ const buildList = (listName) => {
       .toString()
       .trim()
 
-    content +=
-      fs
-        .readFileSync(headerPath, 'utf8')
-        .replace('{{last_modified}}', formattedDate)
-        .replace('{{version}}', gitCommitHash) + '\n'
+    content += `${fs
+      .readFileSync(headerPath, 'utf8')
+      .replace('{{last_modified}}', formattedDate)
+      .replace('{{version}}', gitCommitHash)}\n`
   }
   content += fs.readFileSync(srcPath, 'utf8')
 
