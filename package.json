@@ -9,8 +9,10 @@
     "clean": "rm -rf out",
     "lint": "npm run lint:filters && npm run lint:code",
     "lint:filters": "aglint",
-    "lint:code": "prettier --check .",
-    "lint:fix": "aglint --fix && prettier --write .",
+    "lint:code": "biome lint .",
+    "lint:fix": "aglint --fix && biome lint . --apply",
+    "format": "biome format .",
+    "format:fix": "biome format . --write",
     "codeowners": "codeowners-generator generate",
     "codeowners:check": "codeowners-generator generate --check"
   },
@@ -20,8 +22,8 @@
   },
   "dependencies": {
     "@adguard/aglint": "2.0.8",
-    "codeowners-generator": "2.4.1",
-    "prettier": "3.2.4"
+    "@biomejs/biome": "1.5.3",
+    "codeowners-generator": "2.4.1"
   },
   "codeowners-generator": {
     "includes": [
@@ -30,11 +32,5 @@
     "output": ".github/CODEOWNERS",
     "groupSourceComments": true,
     "customRegenerationCommand": "npm run codeowners"
-  },
-  "prettier": {
-    "useTabs": false,
-    "semi": false,
-    "singleQuote": true,
-    "trailingComma": "all"
   }
 }
