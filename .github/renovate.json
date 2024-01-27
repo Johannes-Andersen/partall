@@ -1,0 +1,45 @@
+{
+  "extends": [
+    "config:recommended",
+    "group:monorepos",
+    "group:recommended",
+    "replacements:all",
+    "workarounds:all"
+  ],
+  "labels": ["type/dependencies"],
+  "vulnerabilityAlerts": {
+    "labels": ["type/dependencies", "area/security", "priority/critical"],
+    "automerge": true
+  },
+  "rollbackPrs": true,
+  "reviewersFromCodeOwners": true,
+  "prHourlyLimit": 10,
+  "lockFileMaintenance": {
+    "enabled": true,
+    "automerge": true
+  },
+  "configMigration": true,
+  "timezone": "Europe/Oslo",
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "automerge": true,
+      "platformAutomerge": true
+    },
+    {
+      "matchManagers": ["nvm"],
+      "rangeStrategy": "pin"
+    },
+    {
+      "matchPackageNames": ["node"],
+      "matchManagers": ["npm"],
+      "rangeStrategy": "pin"
+    }
+  ],
+  "force": {
+    "constraints": {
+      "node": "21",
+      "npm": "10"
+    }
+  }
+}

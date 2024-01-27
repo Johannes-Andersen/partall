@@ -1,0 +1,77 @@
+name: Test & Deploy
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  test:
+    name: Test 🧪
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4.1.1
+      - uses: actions/setup-node@v4.0.1
+        with:
+          node-version-file: '.nvmrc'
+
+      - name: Restore npm cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run lint
+        run: npm run lint
+
+      - name: Validate codeowners
+        run: npm run codeowners:check
+
+      - name: Build filters
+        run: npm run build
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: out
+          path: out/
+  deploy:
+    name: Deploy 🚀
+    needs: test
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    if: >
+      (
+        github.ref == 'refs/heads/main' &&
+        contains(github.event.head_commit.modified, 'filters/') &&
+        github.event_name == 'push'
+      ) || github.event_name == 'workflow_dispatch'
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.1.1
+        with:
+          ref: deploy
+
+      - name: Download Artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: out
+          path: out
+
+      - name: Deploy to branch
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: out
+          branch: deploy
+          clean: true

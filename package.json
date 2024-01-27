@@ -1,0 +1,40 @@
+{
+  "name": "partall-list",
+  "private": true,
+  "license": "GPL-3.0",
+  "author": "Johannes Andersen",
+  "description": "My uBlock Origin (uBO) filter list",
+  "scripts": {
+    "build": "node tools/build.mjs",
+    "clean": "rm -rf out",
+    "lint": "npm run lint:filters && npm run lint:code",
+    "lint:filters": "aglint",
+    "lint:code": "prettier --check .",
+    "lint:fix": "aglint --fix && prettier --write .",
+    "codeowners": "codeowners-generator generate",
+    "codeowners:check": "codeowners-generator generate --check"
+  },
+  "engines": {
+    "node": "21.6.1",
+    "npm": "10"
+  },
+  "dependencies": {
+    "@adguard/aglint": "2.0.8",
+    "codeowners-generator": "2.4.1",
+    "prettier": "3.2.4"
+  },
+  "codeowners-generator": {
+    "includes": [
+      "**/CODEOWNERS"
+    ],
+    "output": ".github/CODEOWNERS",
+    "groupSourceComments": true,
+    "customRegenerationCommand": "npm run codeowners"
+  },
+  "prettier": {
+    "useTabs": false,
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "all"
+  }
+}
