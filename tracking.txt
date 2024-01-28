@@ -1,8 +1,8 @@
 [uBlock Origin]
 ! Title: Partall Filter List - Tracking
 ! Description: uBlock Origin filter list for blocking tracking, to be used in conjunction with other general purpose filter lists.
-! Last modified: 2024-01-28T15:02:21.959Z
-! Version: 26a4bf9
+! Last modified: 2024-01-28T15:20:21.107Z
+! Version: a7ae729
 ! Expires: 1 day
 ! License: https://github.com/johannes-Andersen/partall/blob/main/LICENSE
 ! Homepage: https://github.com/johannes-Andersen/partall
@@ -14,3 +14,5 @@
 
 ||ping.gg/logger-1.min.js$script
 ||ping.gg/js/script.outbound-links.js$script
+||uploadthing.com/js/script.js$script
+||uploadthing.com/api/ingest/*
