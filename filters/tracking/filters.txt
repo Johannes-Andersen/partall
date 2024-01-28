@@ -5,3 +5,5 @@
 
 ||ping.gg/logger-1.min.js$script
 ||ping.gg/js/script.outbound-links.js$script
+||uploadthing.com/js/script.js$script
+||uploadthing.com/api/ingest/*
