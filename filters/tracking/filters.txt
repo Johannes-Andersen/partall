@@ -1,1 +1,4 @@
 ||vanillatweaks.net/assets/server/log-error.php
+
+||komplett.no^$removeparam=productList
+||komplett.no^$removeparam=position
