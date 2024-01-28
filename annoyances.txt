@@ -1,8 +1,8 @@
 [uBlock Origin]
 ! Title: Partall Filter List - Annoyances
 ! Description: uBlock Origin filter list for annoyances, like cookie warnings, newsletter popups, etc.
-! Last modified: 2024-01-28T00:47:25.058Z
-! Version: e9a13bf
+! Last modified: 2024-01-28T02:07:26.466Z
+! Version: 4c9e36d
 ! Expires: 1 day
 ! License: https://github.com/johannes-Andersen/partall/blob/main/LICENSE
 ! Homepage: https://github.com/johannes-Andersen/partall
