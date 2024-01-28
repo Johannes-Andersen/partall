@@ -28,34 +28,44 @@ const buildList = (listName) => {
   const headerPath = path.join('filters', listName, 'header.txt')
   const destPath = path.join('out', `${listName}.txt`)
 
-  if (!fs.existsSync(srcPath)) {
-    console.warn(`Source file for ${listName} does not exist. Skipping...`)
-    return
-  }
-
   let content = ''
-  if (fs.existsSync(headerPath)) {
-    const headerStat = fs.statSync(headerPath)
-    const filterStat = fs.statSync(srcPath)
-    const lastModified = new Date(
-      Math.max(headerStat.mtimeMs, filterStat.mtimeMs),
-    )
-    const formattedDate = lastModified.toISOString()
+  let headerFd
+  let srcFd
 
-    // Get the last Git commit hash
-    const gitCommitHash = execSync('git rev-parse --short HEAD')
-      .toString()
-      .trim()
+  try {
+    if (fs.existsSync(headerPath)) {
+      headerFd = fs.openSync(headerPath, 'r')
+      const headerStat = fs.fstatSync(headerFd)
+      const filterStat = fs.statSync(srcPath)
+      const lastModified = new Date(
+        Math.max(headerStat.mtimeMs, filterStat.mtimeMs),
+      )
+      const formattedDate = lastModified.toISOString()
+      const gitCommitHash = execSync('git rev-parse --short HEAD')
+        .toString()
+        .trim()
 
-    content += `${fs
-      .readFileSync(headerPath, 'utf8')
-      .replace('{{last_modified}}', formattedDate)
-      .replace('{{version}}', gitCommitHash)}\n`
+      content += `${fs
+        .readFileSync(headerFd, 'utf8')
+        .replace('{{last_modified}}', formattedDate)
+        .replace('{{version}}', gitCommitHash)}\n`
+
+      fs.closeSync(headerFd)
+    }
+
+    if (fs.existsSync(srcPath)) {
+      srcFd = fs.openSync(srcPath, 'r')
+      content += fs.readFileSync(srcFd, 'utf8')
+      fs.closeSync(srcFd)
+    }
+
+    fs.writeFileSync(destPath, content)
+    console.info(`Built ${listName} successfully.`)
+  } catch (e) {
+    console.error(`Error building ${listName}: ${e.message}`)
+    if (headerFd) fs.closeSync(headerFd)
+    if (srcFd) fs.closeSync(srcFd)
   }
-  content += fs.readFileSync(srcPath, 'utf8')
-
-  fs.writeFileSync(destPath, content)
-  console.info(`Built ${listName} successfully.`)
 }
 
 const buildAllLists = () => {
