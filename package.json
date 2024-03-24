@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "@adguard/aglint": "2.0.8",
-    "@biomejs/biome": "1.5.3",
+    "@biomejs/biome": "1.6.2",
     "codeowners-generator": "2.4.1"
   },
   "codeowners-generator": {
