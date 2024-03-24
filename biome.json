@@ -20,7 +20,6 @@
         "noApproximativeNumericConstant": "warn"
       },
       "nursery": {
-        "useAwait": "error",
         "noDuplicateJsonKeys": "error"
       }
     }
