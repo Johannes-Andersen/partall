@@ -26,9 +26,7 @@
     "codeowners-generator": "2.4.1"
   },
   "codeowners-generator": {
-    "includes": [
-      "**/CODEOWNERS"
-    ],
+    "includes": ["**/CODEOWNERS"],
     "output": ".github/CODEOWNERS",
     "groupSourceComments": true,
     "customRegenerationCommand": "npm run codeowners"
