@@ -21,7 +21,7 @@
     "npm": "10"
   },
   "dependencies": {
-    "@adguard/aglint": "2.0.8",
+    "@adguard/aglint": "2.0.9",
     "@biomejs/biome": "1.7.1",
     "codeowners-generator": "2.4.1"
   },
