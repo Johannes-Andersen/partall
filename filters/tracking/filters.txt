@@ -9,3 +9,4 @@
 ||uploadthing.com/api/ingest/*
 ||www.cdn.tv2.no/s/js/player/libs/mux/
 ||qualitymetrics.tv2.no^
+||www.elkjop.no/api/dy/engagement
