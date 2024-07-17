@@ -7,3 +7,5 @@
 ||ping.gg/js/script.outbound-links.js$script
 ||uploadthing.com/js/script.js$script
 ||uploadthing.com/api/ingest/*
+||www.cdn.tv2.no/s/js/player/libs/mux/
+||qualitymetrics.tv2.no^
