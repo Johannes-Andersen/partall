@@ -1,22 +1,32 @@
 [uBlock Origin]
 ! Title: Partall Filter List - Tracking
 ! Description: uBlock Origin filter list for blocking tracking, to be used in conjunction with other general purpose filter lists.
-! Last modified: 2024-07-21T00:41:24.797Z
-! Version: 19c0511
+! Last modified: 2024-07-21T22:06:24.943Z
+! Version: 8fc22db
 ! Expires: 1 day
 ! License: https://github.com/johannes-Andersen/partall/blob/main/LICENSE
 ! Homepage: https://github.com/johannes-Andersen/partall
 
-||vanillatweaks.net/assets/server/log-error.php
-
+! URL Param trackers
 ||komplett.no^$removeparam=productList
 ||komplett.no^$removeparam=position
 
-||ping.gg/logger-1.min.js$script
-||ping.gg/js/script.outbound-links.js$script
+! Site specific trackers
+||vanillatweaks.net/assets/server/log-error.php
 ||uploadthing.com/js/script.js$script
 ||uploadthing.com/api/ingest/*
+||ping.gg/logger-1.min.js$script
+||ping.gg/js/script.outbound-links.js$script
+||telemetry.nav.no^
+||amplitude.nav.no^
+||faro.apc.telenor.net/collect
+||www.elkjop.no/api/dy/engagement
 ||www.cdn.tv2.no/s/js/player/libs/mux/
 ||qualitymetrics.tv2.no^
-||www.elkjop.no/api/dy/engagement
+||cdn.nav.no/personbruker/decorator-next/public/assets/amplitude$script
+||oda.com/api/v1/metrics/$ping
+
+! Generic tracking providers
+||shopgun.com^$third-party
 ||raygun.io$third-party
+||piano.io^$third-party
