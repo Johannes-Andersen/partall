@@ -23,7 +23,7 @@ jobs:
           cache: "pnpm"
 
       - name: Install dependencies
-        run: pnpm intall --frozen-lockfile --prefer-offline
+        run: pnpm install --frozen-lockfile --prefer-offline
 
       - name: Run cleanup
         run: pnpm run dead-domains:fix
