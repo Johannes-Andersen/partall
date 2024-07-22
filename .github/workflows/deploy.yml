@@ -1,0 +1,33 @@
+name: Deploy
+
+on:
+  workflow_call:
+
+concurrency: 
+  group: ${{ github.workflow }}-${{ github.ref }}
+
+jobs:
+  deploy:
+    name: Deploy 🚀
+    needs: test
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
+      - run: corepack enable
+      - uses: actions/setup-node@1e60f620b9541d16bece96c5465dc8ee9832be0b # v4.0.3
+        with:
+          node-version-file: ".nvmrc"
+          cache: "pnpm"
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile --prefer-offline
+
+      - name: Build filters
+        run: pnpm run build
+
+      - name: Dummy deploy
+        run: echo "TODO, Generate patches and deploy"
