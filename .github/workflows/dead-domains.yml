@@ -39,8 +39,8 @@ jobs:
         uses: peter-evans/create-pull-request@v6
         with:
           commit-message: "fix: remove dead domains"
-          title: "Automated dead domains cleanup"
-          body: "This is an auto-generated PR with fixes for dead domains."
+          title: "fix: remove dead domains"
+          body: "This is an auto-generated PR to remove dead domains. Review and merge if it looks good."
           branch: "cleanup/dead-domains"
           base: main
 
