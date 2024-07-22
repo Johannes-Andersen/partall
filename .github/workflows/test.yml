@@ -39,6 +39,7 @@ jobs:
       
   deploy:
     name: Attempt deploy 🔭
-    needs: test
+    runs-on: ubuntu-latest
     timeout-minutes: 2
+    needs: test
     uses: ./.github/workflows/deploy.yml
