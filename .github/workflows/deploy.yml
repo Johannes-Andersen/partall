@@ -22,6 +22,7 @@ jobs:
         run: |
           changed_lists=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep '^filters/' | cut -d/ -f2 | sort -u | jq -R -s -c 'split("\n") | map(select(. != ""))')
           echo "changed_lists=$changed_lists" >> $GITHUB_ENV
+          echo "::set-output name=changed_lists::$changed_lists"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -35,7 +36,7 @@ jobs:
     needs: find-changes
     strategy:
       matrix:
-        list: ${{ fromJson(env.changed_lists) }}
+        list: ${{ fromJson(needs.find-changes.outputs.changed_lists) }}
     permissions:
       contents: write
 
