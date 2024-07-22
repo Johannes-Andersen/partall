@@ -1,0 +1,33 @@
+{
+  "name": "Partall Devcontainer",
+  "build": {
+    "dockerfile": "Dockerfile",
+
+    "context": ".."
+  },
+
+  "mounts": [
+    "source=profile,target=/root,type=volume",
+    "target=/root/.vscode-server,type=volume",
+    "source=partall-bashhistory,target=/commandhistory,type=volume"
+  ],
+
+  "waitFor": "updateContentCommand",
+  "updateContentCommand": "corepack prepare & pnpm install",
+
+  "customizations": {
+    "codespaces": {
+      "openFiles": ["CONTRIBUTING.md"]
+    },
+    "vscode": {
+      "extensions": [
+        "adguard.adblock",
+        "biomejs.biome",
+        "chdsbd.github-code-owners",
+        "streetsidesoftware.code-spell-checker",
+        "streetsidesoftware.code-spell-checker-norwegian-bokmal",
+        "Gruntfuggly.todo-tree"
+      ]
+    }
+  }
+}

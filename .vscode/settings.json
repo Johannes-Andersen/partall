@@ -1,0 +1,10 @@
+{
+  "biome.enabled": true,
+  "editor.defaultFormatter": "biomejs.biome",
+  "git.autofetch": true,
+  "editor.formatOnSave": true,
+  "githubCodeOwners.format.enabled": true,
+  "githubCodeOwners.format.alignmentOffset": 4,
+  "adblock.enableAglint": true,
+  "adblock.packageManager": "pnpm"
+}

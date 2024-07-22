@@ -14,35 +14,32 @@ jobs:
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4.1.7
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
       - uses: actions/setup-node@v4.0.3
         with:
           node-version-file: ".nvmrc"
-
-      - name: Restore npm cache
-        uses: actions/cache@v4
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
+          cache: "pnpm"
 
       - name: Install dependencies
-        run: npm ci
+        run: pnpm intall --frozen-lockfile --prefer-offline
 
       - name: Setup Biome
         uses: biomejs/setup-biome@v2
 
       - name: Run filters lint
-        run: npm run lint:filters
+        run: pnpm run lint:filters
 
       - name: Run Biome
         run: biome ci . --reporter=github
 
       - name: Validate codeowners
-        run: npm run codeowners:check
+        run: pnpm run codeowners:check
 
       - name: Build filters
-        run: npm run build
+        run: pnpm run build
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
