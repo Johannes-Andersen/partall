@@ -14,6 +14,9 @@ importers:
       '@adguard/dead-domains-linter':
         specifier: 1.0.19
         version: 1.0.19
+      '@adguard/diff-builder':
+        specifier: 1.0.18
+        version: 1.0.18
       '@biomejs/biome':
         specifier: 1.8.3
         version: 1.8.3
@@ -35,6 +38,10 @@ packages:
   '@adguard/dead-domains-linter@1.0.19':
     resolution: {integrity: sha512-ebzg+InC8DzgthuCpQVOplx3bKt10Snq2B+nocCbUuuYFtyHMBgMd1LO7kKahWLf1Z4Yjb/vaeoS3c5u2szjyA==}
     engines: {node: '>=18'}
+    hasBin: true
+
+  '@adguard/diff-builder@1.0.18':
+    resolution: {integrity: sha512-VTaApBCbRUKpBQ7nyDguaIaahg6lkl/IZos1kjjUHBCPji0fDruzTuYm/GOiDJHsGaPlyL8orLmKjJnvku66FQ==}
     hasBin: true
 
   '@adguard/ecss-tree@1.0.8':
@@ -294,6 +301,9 @@ packages:
     resolution: {integrity: sha512-iRDPJKUPVEND7dHPO8rkbOnPpyDygcDFtWjpeWNCgy8WP2rXcxXL8TskReQl6OrB2G7+UJrags1q15Fudc7G6w==}
     engines: {node: '>= 8'}
 
+  crypto-js@4.2.0:
+    resolution: {integrity: sha512-KALDyEYgpY+Rlob/iriUtjV6d5Eq+Y191A5g4UqLAi8CyGP9N1+FdVbkc1SxKc2r4YAYqG8JzO2KGL+AizD70Q==}
+
   css-tree@2.3.1:
     resolution: {integrity: sha512-6Fv1DV/TYw//QF5IzQdqsNDjx/wc8TrMBZsqjL9eW01tWb7R7k/mq+/VXfJCl7SoD5emsJop9cOByJZfs8hYIw==}
     engines: {node: ^10 || ^12.20.0 || ^14.13.0 || >=15.0.0}
@@ -313,6 +323,11 @@ packages:
 
   defaults@1.0.4:
     resolution: {integrity: sha512-eFuaLoy/Rxalv2kr+lqMlUnrDWV+3j4pljOIJgLIhI058IQfWJ7vXhyEIHu+HtC738klGALYxOKDO0bQP3tg8A==}
+
+  diff@https://codeload.github.com/105th/jsdiff/tar.gz/2be2e7df90e8eebd99f0385c7b1dc16c2f4dcc1a:
+    resolution: {tarball: https://codeload.github.com/105th/jsdiff/tar.gz/2be2e7df90e8eebd99f0385c7b1dc16c2f4dcc1a}
+    version: 5.1.1
+    engines: {node: '>=0.3.1'}
 
   eastasianwidth@0.2.0:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
@@ -798,6 +813,12 @@ snapshots:
     transitivePeerDependencies:
       - encoding
 
+  '@adguard/diff-builder@1.0.18':
+    dependencies:
+      commander: 11.1.0
+      crypto-js: 4.2.0
+      diff: https://codeload.github.com/105th/jsdiff/tar.gz/2be2e7df90e8eebd99f0385c7b1dc16c2f4dcc1a
+
   '@adguard/ecss-tree@1.0.8':
     dependencies:
       css-tree: 2.3.1
@@ -1070,6 +1091,8 @@ snapshots:
       shebang-command: 2.0.0
       which: 2.0.2
 
+  crypto-js@4.2.0: {}
+
   css-tree@2.3.1:
     dependencies:
       mdn-data: 2.0.30
@@ -1084,6 +1107,8 @@ snapshots:
   defaults@1.0.4:
     dependencies:
       clone: 1.0.4
+
+  diff@https://codeload.github.com/105th/jsdiff/tar.gz/2be2e7df90e8eebd99f0385c7b1dc16c2f4dcc1a: {}
 
   eastasianwidth@0.2.0: {}
 

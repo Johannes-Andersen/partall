@@ -49,7 +49,7 @@ jobs:
   deploy:
     name: Deploy 🚀
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 10
     needs: find-changes
     if: ${{ needs.find-changes.outputs.changed_lists != '[]' }}
     strategy:
@@ -59,10 +59,11 @@ jobs:
       contents: write
 
     steps:
-      - name: Checkout code
+      - name: Checkout main branch
         uses: actions/checkout@v4.1.7
         with:
-          fetch-depth: 1
+          fetch-depth: 2
+          ref: main
 
       - run: corepack enable
       - uses: actions/setup-node@v4.0.3
@@ -75,6 +76,32 @@ jobs:
 
       - name: Build filters
         run: pnpm run build -- -l ${{ matrix.list }}
+        
+      - name: Checkout deploy branch
+        uses: actions/checkout@v4.1.7
+        with:
+          fetch-depth: 2
+          ref: deploy
+          path: deploy-branch
 
-      - name: Dummy deploy
-        run: cat out/${{ matrix.list }}.txt
+      - name: Copy filters to deploy branch root
+        run: |
+          cp out/ads.txt deploy-branch/ads.txt
+          cp out/annoyances.txt deploy-branch/annoyances.txt
+          cp out/tracking.txt deploy-branch/tracking.txt
+
+      - name: Use diff-builder
+        run: |
+          patch_name=$(echo ${{ matrix.list }} | tr '[:upper:]' '[:lower:]')_$(echo ${{ inputs.current_sha }} | cut -c1-8)
+          mkdir -p deploy-branch/patches/${{ matrix.list }}
+          pnpm exec diff-builder build -n "$patch_name" -t 30 out/${{ matrix.list }}.txt deploy-branch/${{ matrix.list }}.txt deploy-branch/patches/${{ matrix.list }}
+
+      - name: Commit and push changes
+        run: |
+          cd deploy-branch
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git add patches/
+          git add ads.txt annoyances.txt tracking.txt
+          git commit -m "Deployment of ${{ matrix.list }}"
+          git push origin deploy
