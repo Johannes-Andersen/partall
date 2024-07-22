@@ -36,10 +36,7 @@ jobs:
 
       - name: Build filters
         run: pnpm run build
-      
-  deploy:
-    name: Attempt deploy 🔭
-    runs-on: ubuntu-latest
-    timeout-minutes: 2
-    needs: test
-    uses: ./.github/workflows/deploy.yml
+
+      - name: Attempt deploy 🔭
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        uses: ./.github/workflows/deploy.yml
