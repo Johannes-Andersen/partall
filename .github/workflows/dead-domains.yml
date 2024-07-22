@@ -28,7 +28,7 @@ jobs:
         run: npm ci
 
       - name: Run cleanup
-        uses: npm run dead-domains:fix
+        run: npm run dead-domains:fix
 
       - name: Check for changes
         id: git-check
