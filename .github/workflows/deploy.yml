@@ -14,13 +14,16 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
+      - uses: actions/checkout@v4.1.7
 
       - name: Find changed lists
         id: find-changes
         run: |
-          echo "::set-output name=changed_lists::$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep 'lists/' | cut -d/ -f2 | cut -d. -f1 | sort -u)"
-        
+          echo "changed_lists=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep 'lists/' | cut -d/ -f2 | cut -d. -f1 | sort -u)" >> $GITHUB_ENV
+      
+    outputs:
+      changed_lists: ${{ steps.find-changes.outputs.changed_lists }}
+
   deploy:
     name: Deploy 🚀
     runs-on: ubuntu-latest
@@ -28,14 +31,14 @@ jobs:
     needs: find-changes
     strategy:
       matrix:
-        list: ${{ steps.find-changes.outputs.changed_lists }}
+        list: ${{ fromJson(needs.find-changes.outputs.changed_lists) }}
     permissions:
       contents: write
 
     steps:
-      - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
+      - uses: actions/checkout@v4.1.7
       - run: corepack enable
-      - uses: actions/setup-node@1e60f620b9541d16bece96c5465dc8ee9832be0b # v4.0.3
+      - uses: actions/setup-node@v4.0.3
         with:
           node-version-file: ".nvmrc"
           cache: "pnpm"
