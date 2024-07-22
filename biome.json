@@ -1,5 +1,5 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.5.3/schema.json",
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
   "organizeImports": {
     "enabled": true
   },
@@ -8,24 +8,41 @@
     "rules": {
       "recommended": true,
       "correctness": {
-        "noUndeclaredVariables": "error"
+        "noUndeclaredVariables": "error",
+        "noConstantMathMinMaxClamp": "error",
+        "noUnusedImports": "error"
+      },
+      "performance": {
+        "noReExportAll": "error",
+        "noBarrelFile": "error",
+        "noAccumulatingSpread": "error"
       },
       "complexity": {
-        "noForEach": "off"
+        "noForEach": "off",
+        "useSimplifiedLogicExpression": "error"
       },
       "style": {
-        "noShoutyConstants": "error"
+        "noShoutyConstants": "error",
+        "noDefaultExport": "error",
+        "noNegationElse": "error",
+        "useCollapsedElseIf": "error"
       },
       "suspicious": {
-        "noApproximativeNumericConstant": "warn"
+        "useAwait": "error",
+        "noSkippedTests": "warn"
       },
       "nursery": {
-        "noDuplicateJsonKeys": "error"
+        "noDuplicateJsonKeys": "error",
+        "useErrorMessage": "error",
+        "useDateNow": "error",
+        "noUselessStringConcat": "error",
+        "noUndeclaredDependencies": "error",
+        "noDuplicateElseIf": "error"
       }
     }
   },
   "files": {
-    "ignore": [".github/CODEOWNERS"]
+    "ignore": [".github/CODEOWNERS", "node_modules"]
   },
   "vcs": {
     "enabled": true,
@@ -39,18 +56,35 @@
     "indentStyle": "space",
     "indentWidth": 2,
     "lineWidth": 80,
-    "lineEnding": "lf",
-    "ignore": []
+    "lineEnding": "lf"
   },
+  "json": {
+    "formatter": {
+      "enabled": true,
+      "trailingCommas": "none",
+      "indentStyle": "space",
+      "lineEnding": "lf"
+    },
+    "linter": {
+      "enabled": true
+    },
+    "parser": {
+      "allowTrailingCommas": false,
+      "allowComments": false
+    }
+  },
+
   "javascript": {
     "formatter": {
       "arrowParentheses": "always",
       "quoteStyle": "single",
       "semicolons": "asNeeded",
-      "trailingComma": "all",
       "quoteProperties": "asNeeded",
       "bracketSpacing": true,
       "bracketSameLine": false
+    },
+    "linter": {
+      "enabled": true
     }
   }
 }

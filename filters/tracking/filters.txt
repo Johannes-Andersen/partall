@@ -21,3 +21,5 @@
 ||shopgun.com^$third-party
 ||raygun.io$third-party
 ||piano.io^$third-party
+
+||asuperdeaddomain.no
