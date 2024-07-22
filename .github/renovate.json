@@ -35,11 +35,5 @@
       "matchManagers": ["npm"],
       "rangeStrategy": "pin"
     }
-  ],
-  "force": {
-    "constraints": {
-      "node": "21",
-      "npm": "10"
-    }
-  }
+  ]
 }
