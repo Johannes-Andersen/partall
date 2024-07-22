@@ -13,14 +13,18 @@ jobs:
     timeout-minutes: 5
     permissions:
       contents: read
+
     steps:
       - uses: actions/checkout@v4.1.7
 
       - name: Find changed lists
         id: find-changes
         run: |
-          echo "changed_lists=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep 'lists/' | cut -d/ -f2 | cut -d. -f1 | sort -u)" >> $GITHUB_ENV
-      
+          changed_lists=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep '^filters/' | cut -d/ -f2 | sort -u | jq -R -s -c 'split("\n") | map(select(. != ""))')
+          echo "changed_lists=$changed_lists" >> $GITHUB_ENV
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
     outputs:
       changed_lists: ${{ steps.find-changes.outputs.changed_lists }}
 
@@ -31,7 +35,7 @@ jobs:
     needs: find-changes
     strategy:
       matrix:
-        list: ${{ fromJson(needs.find-changes.outputs.changed_lists) }}
+        list: ${{ fromJson(env.changed_lists) }}
     permissions:
       contents: write
 
