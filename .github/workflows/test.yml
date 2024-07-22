@@ -1,0 +1,44 @@
+name: Test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    name: Test 🧪
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
+      - run: corepack enable
+      - uses: actions/setup-node@1e60f620b9541d16bece96c5465dc8ee9832be0b # v4.0.3
+        with:
+          node-version-file: ".nvmrc"
+          cache: "pnpm"
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile --prefer-offline
+
+      - name: Setup Biome
+        uses: biomejs/setup-biome@1cbe33ead22c7a2fded3b52fa2893611c815c9b5 # v2
+
+      - name: Run filters lint
+        run: pnpm run lint:filters
+
+      - name: Run Biome
+        run: biome ci . --reporter=github
+
+      - name: Validate codeowners
+        run: pnpm run codeowners:check
+
+      - name: Build filters
+        run: pnpm run build
+      
+  deploy:
+    name: Attempt deploy 🔭
+    needs: test
+    timeout-minutes: 2
+    uses: ./.github/workflows/deploy.yml
