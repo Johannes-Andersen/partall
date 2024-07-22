@@ -26,8 +26,9 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     needs: find-changes
-    matrix:
-      list: ${{ steps.find-changes.outputs.changed_lists }}
+    strategy:
+      matrix:
+        list: ${{ steps.find-changes.outputs.changed_lists }}
     permissions:
       contents: write
 
