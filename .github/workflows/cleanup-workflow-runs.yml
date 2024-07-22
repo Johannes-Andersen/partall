@@ -5,14 +5,15 @@ on:
   workflow_dispatch:
 
 jobs:
-  del_runs:
+  delete:
+    name: Delete workflow runs 🗑️
     runs-on: ubuntu-latest
     permissions:
       actions: write
       contents: read
 
     steps:
-      - name: Delete workflow runs 🗑️
+      - name: Start cleanup
         uses: Mattraks/delete-workflow-runs@v2
         with:
           token: ${{ github.token }}
