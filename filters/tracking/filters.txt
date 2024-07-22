@@ -22,4 +22,4 @@
 ||raygun.io$third-party
 ||piano.io^$third-party
 
-||asuperdeaddomain.no
+||shopgdun.com^$third-party
