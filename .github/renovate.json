@@ -1,11 +1,5 @@
 {
-  "extends": [
-    "config:recommended",
-    "group:monorepos",
-    "group:recommended",
-    "replacements:all",
-    "workarounds:all"
-  ],
+  "extends": ["config:best-practices"],
   "labels": ["type/dependencies"],
   "vulnerabilityAlerts": {
     "labels": ["type/dependencies", "area/security", "priority/critical"],
@@ -13,18 +7,19 @@
   },
   "rollbackPrs": true,
   "reviewersFromCodeOwners": true,
-  "prHourlyLimit": 10,
+  "prHourlyLimit": 0,
+  "prConcurrentLimit": 0,
   "lockFileMaintenance": {
     "enabled": true,
     "automerge": true
   },
   "configMigration": true,
+  "platformAutomerge": true,
   "timezone": "Europe/Oslo",
   "packageRules": [
     {
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
-      "automerge": true,
-      "platformAutomerge": true
+      "automerge": true
     },
     {
       "matchManagers": ["nvm"],
