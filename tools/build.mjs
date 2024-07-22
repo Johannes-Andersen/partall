@@ -47,8 +47,8 @@ const buildList = (listName) => {
 
       content += `${fs
         .readFileSync(headerFd, 'utf8')
-        .replace('{{last_modified}}', formattedDate)
-        .replace('{{version}}', gitCommitHash)}\n`
+        .replaceAll('{{last_modified}}', formattedDate)
+        .replaceAll('{{version}}', gitCommitHash)}\n`
 
       fs.closeSync(headerFd)
     }

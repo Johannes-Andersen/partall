@@ -1,0 +1,108 @@
+name: Deploy
+
+on:
+  workflow_call:
+    inputs:
+      previous_sha:
+        required: true
+        type: string
+        description: 'Previous commit SHA'
+      current_sha:
+        required: true
+        type: string
+        description: 'Current commit SHA'
+
+concurrency: 
+  group: ${{ github.workflow }}-${{ github.ref }}
+
+jobs:
+  find-changes:
+    name: Find changed lists 🕵️
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
+        with:
+          fetch-depth: 5
+
+      - name: Find changed lists
+        id: find-changes
+        run: |
+          changed_lists=$(git diff --name-only "${{ inputs.previous_sha }}" "${{ inputs.current_sha }}" | grep '^filters/' | cut -d/ -f2 | sort -u | jq -R -s -c 'split("\n") | map(select(. != ""))')
+
+          if [[ -z "$changed_lists" || "$changed_lists" == "[]" ]]; then
+            echo "No changes detected."
+            echo "changed_lists=[]" >> $GITHUB_ENV
+          else
+            echo "changed_lists=$changed_lists" >> $GITHUB_ENV
+          fi
+          
+          echo "::set-output name=changed_lists::$changed_lists"
+
+    outputs:
+      changed_lists: ${{ steps.find-changes.outputs.changed_lists }}
+
+  deploy:
+    name: Deploy 🚀
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    needs: find-changes
+    if: ${{ needs.find-changes.outputs.changed_lists != '[]' }}
+    strategy:
+      max-parallel: 1
+      matrix:
+        list: ${{ fromJson(needs.find-changes.outputs.changed_lists) }}
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout main branch
+        uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
+        with:
+          fetch-depth: 2
+          ref: main
+
+      - run: corepack enable
+      - uses: actions/setup-node@1e60f620b9541d16bece96c5465dc8ee9832be0b # v4.0.3
+        with:
+          node-version-file: ".nvmrc"
+          cache: "pnpm"
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile --prefer-offline
+
+      - name: Build filters
+        run: pnpm run build -l ${{ matrix.list }}
+        
+      - name: Checkout deploy branch
+        uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
+        with:
+          fetch-depth: 2
+          ref: deploy
+          path: deploy-branch
+
+      - name: Backup old list
+        run: mkdir -p old && cp deploy-branch/${{ matrix.list }}.txt old/${{ matrix.list }}.txt
+
+      - name: Move over new list
+        run: cp out/${{ matrix.list }}.txt deploy-branch/${{ matrix.list }}.txt
+
+      - name: Use diff-builder
+        run: |
+          patch_name=$(echo ${{ matrix.list }} | tr '[:upper:]' '[:lower:]')_$(echo ${{ inputs.current_sha }} | cut -c1-8)
+          mkdir -p deploy-branch/patches/${{ matrix.list }}
+          pnpm exec diff-builder build -c -v -n "$patch_name" -t 24 old/${{ matrix.list }}.txt deploy-branch/${{ matrix.list }}.txt deploy-branch/patches/${{ matrix.list }}
+
+      - name: Commit and push changes
+        run: |
+          cd deploy-branch
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git add patches/
+          git add ads.txt annoyances.txt tracking.txt
+          git commit -m "Deployment of ${{ matrix.list }}"
+          git push origin deploy
