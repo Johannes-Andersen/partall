@@ -7,10 +7,27 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
+  find-changes: 
+    name: Find changed lists 🕵️
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
+
+      - name: Find changed lists
+        id: find-changes
+        run: |
+          echo "::set-output name=changed_lists::$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep 'lists/' | cut -d/ -f2 | cut -d. -f1 | sort -u)"
+        
   deploy:
     name: Deploy 🚀
     runs-on: ubuntu-latest
     timeout-minutes: 5
+    needs: find-changes
+    matrix:
+      list: ${{ steps.find-changes.outputs.changed_lists }}
     permissions:
       contents: write
 
@@ -26,7 +43,7 @@ jobs:
         run: pnpm install --frozen-lockfile --prefer-offline
 
       - name: Build filters
-        run: pnpm run build
+        run: pnpm run build -- -l ${{ matrix.list }}
 
       - name: Dummy deploy
-        run: echo "TODO, Generate patches and deploy"
+        run: cat out/${{ matrix.list }}.txt
