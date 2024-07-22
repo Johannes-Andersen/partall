@@ -21,7 +21,12 @@ jobs:
         id: find-changes
         run: |
           changed_lists=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep '^filters/' | cut -d/ -f2 | sort -u | jq -R -s -c 'split("\n") | map(select(. != ""))')
-          echo "changed_lists=$changed_lists" >> $GITHUB_ENV
+          if [[ -z "$changed_lists" || "$changed_lists" == "[]" ]]; then
+            echo "No changes detected."
+            echo "changed_lists=[]" >> $GITHUB_ENV
+          else
+            echo "changed_lists=$changed_lists" >> $GITHUB_ENV
+          fi
           echo "::set-output name=changed_lists::$changed_lists"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -34,6 +39,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     needs: find-changes
+    if: ${{ needs.find-changes.outputs.changed_lists != '[]' }}
     strategy:
       matrix:
         list: ${{ fromJson(needs.find-changes.outputs.changed_lists) }}
