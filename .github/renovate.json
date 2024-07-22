@@ -34,6 +34,15 @@
       "matchPackageNames": ["node"],
       "matchManagers": ["npm"],
       "rangeStrategy": "pin"
+    },
+    {
+      "matchManagers": ["pnpm"],
+      "rangeStrategy": "pin"
+    },
+    {
+      "matchPackageNames": ["pnpm"],
+      "automerge": true,
+      "platformAutomerge": true
     }
   ]
 }
