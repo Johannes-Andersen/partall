@@ -22,4 +22,3 @@
 ||raygun.io$third-party
 ||piano.io^$third-party
 
-||shopgdun.com^$third-party
