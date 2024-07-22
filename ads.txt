@@ -1,8 +1,8 @@
 [uBlock Origin]
 ! Title: Partall Filter List - Ads
 ! Description: uBlock Origin filter list for blocking ads, to be used in conjunction with other general purpose filter lists.
-! Last modified: 2024-07-21T22:06:24.943Z
-! Version: 8fc22db
+! Last modified: 2024-07-22T01:27:18.478Z
+! Version: 4f9e2cd
 ! Expires: 1 day
 ! License: https://github.com/johannes-Andersen/partall/blob/main/LICENSE
 ! Homepage: https://github.com/johannes-Andersen/partall
