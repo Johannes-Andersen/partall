@@ -1,4 +1,5 @@
 {
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:best-practices"],
   "labels": ["type/dependencies"],
   "vulnerabilityAlerts": {
@@ -28,6 +29,10 @@
     {
       "matchPackageNames": ["node", "pnpm"],
       "matchManagers": ["npm"],
+      "rangeStrategy": "pin"
+    },
+    {
+      "matchDepTypes": ["packageManager"],
       "rangeStrategy": "pin"
     }
   ]
