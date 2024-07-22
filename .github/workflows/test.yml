@@ -37,6 +37,9 @@ jobs:
       - name: Build filters
         run: pnpm run build
 
-      - name: Attempt deploy 🔭
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        uses: ./.github/workflows/deploy.yml
+    attempt_deploy:
+      name: Attempt deploy 🔭
+      needs: test
+      if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+      uses: ./.github/workflows/deploy.yml
+      secrets: inherit
