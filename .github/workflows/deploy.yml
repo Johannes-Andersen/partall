@@ -2,12 +2,21 @@ name: Deploy
 
 on:
   workflow_call:
+    inputs:
+      previous_sha:
+        required: true
+        type: string
+        description: 'Previous commit SHA'
+      current_sha:
+        required: true
+        type: string
+        description: 'Current commit SHA'
 
 concurrency: 
   group: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
-  find-changes: 
+  find-changes:
     name: Find changed lists 🕵️
     runs-on: ubuntu-latest
     timeout-minutes: 5
@@ -15,21 +24,24 @@ jobs:
       contents: read
 
     steps:
-      - uses: actions/checkout@v4.1.7
+      - name: Checkout code
+        uses: actions/checkout@v4.1.7
+        with:
+          fetch-depth: 5
 
       - name: Find changed lists
         id: find-changes
         run: |
-          changed_lists=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep '^filters/' | cut -d/ -f2 | sort -u | jq -R -s -c 'split("\n") | map(select(. != ""))')
+          changed_lists=$(git diff --name-only "${{ inputs.previous_sha }}" "${{ inputs.current_sha }}" | grep '^filters/' | cut -d/ -f2 | sort -u | jq -R -s -c 'split("\n") | map(select(. != ""))')
+
           if [[ -z "$changed_lists" || "$changed_lists" == "[]" ]]; then
             echo "No changes detected."
             echo "changed_lists=[]" >> $GITHUB_ENV
           else
             echo "changed_lists=$changed_lists" >> $GITHUB_ENV
           fi
+          
           echo "::set-output name=changed_lists::$changed_lists"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     outputs:
       changed_lists: ${{ steps.find-changes.outputs.changed_lists }}
@@ -47,7 +59,11 @@ jobs:
       contents: write
 
     steps:
-      - uses: actions/checkout@v4.1.7
+      - name: Checkout code
+        uses: actions/checkout@v4.1.7
+        with:
+          fetch-depth: 1
+
       - run: corepack enable
       - uses: actions/setup-node@v4.0.3
         with:

@@ -11,13 +11,14 @@ jobs:
     name: Test 🧪
     runs-on: ubuntu-latest
     timeout-minutes: 5
+
     steps:
       - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
       - run: corepack enable
       - uses: actions/setup-node@1e60f620b9541d16bece96c5465dc8ee9832be0b # v4.0.3
         with:
           node-version-file: ".nvmrc"
-          cache: "pnpm"
+          cache: 'pnpm'
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile --prefer-offline
@@ -40,6 +41,9 @@ jobs:
   attempt_deploy:
     name: Attempt deploy 🔭
     needs: test
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
     uses: ./.github/workflows/deploy.yml
     secrets: inherit
+    with:
+      previous_sha: ${{ github.event.before }}
+      current_sha: ${{ github.sha }}
