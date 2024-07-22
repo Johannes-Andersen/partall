@@ -5,6 +5,10 @@ on:
   schedule:
     - cron: "0 9 * * *"
 
+permissions:
+  contents: read
+  pull-requests: write
+
 jobs:
   cleanup:
     name: Cleanup dead domains 🧹
@@ -30,32 +34,17 @@ jobs:
       - name: Run cleanup
         run: npm run dead-domains:fix
 
-      - name: Check for changes
-        id: git-check
-        run: |
-          git config --global user.email "action@github.com"
-          git config --global user.name "GitHub Action"
-          git add .
-          if git diff --staged --quiet; then
-            echo "No changes to commit"
-            echo "::set-output name=changes::false"
-          else
-            echo "Changes detected"
-            echo "::set-output name=changes::true"
-          fi
-
-      - name: Commit changes
-        if: steps.git-check.outputs.changes == 'true'
-        run: |
-          git commit -m "fix: remove dead domains"
-          git push
-
       - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v3
-        if: steps.git-check.outputs.changes == 'true'
+        id: cpr
+        uses: peter-evans/create-pull-request@v6
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "Fix dead domains"
+          commit-message: "fix: remove dead domains"
           title: "Automated dead domains cleanup"
           body: "This is an auto-generated PR with fixes for dead domains."
           branch: "cleanup/dead-domains"
+
+      - name: Check outputs
+        if: ${{ steps.cpr.outputs.pull-request-number }}
+        run: |
+          echo "Pull Request Number - ${{ steps.cpr.outputs.pull-request-number }}"
+          echo "Pull Request URL - ${{ steps.cpr.outputs.pull-request-url }}"
