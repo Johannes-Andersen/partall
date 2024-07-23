@@ -1,0 +1,16 @@
+diff checksum:f6d76cab372cdabe10cb5088813c19fc27aa6697 lines:14
+d2 1
+a2 1
+! Diff-Path: patches/ads/ads_a0cfa36d-478249-24.patch
+d5 4
+a8 4
+! Last modified: 2024-07-23T00:46:32.543Z
+! Last updated: 2024-07-23T00:46:32.543Z
+! Version: a0cfa36
+! Expires: 5 days
+d20 1
+a20 4
+
+www.kode24.no##.dummy-ad
+www.kode24.no##.super-ad
+www.kode24.no##even-more
