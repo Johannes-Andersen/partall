@@ -2,8 +2,8 @@
 ! Diff-Path: patches/tracking/tracking_824cb6a9-478249-24.patch
 ! Title: Partall Filter List - Tracking
 ! Description: uBlock Origin filter list for blocking tracking, to be used in conjunction with other general purpose filter lists.
-! Last modified: 2024-07-23T00:49:41.944Z
-! Last updated: 2024-07-23T00:49:41.944Z
+! Last modified: 2024-07-23T00:51:27.990Z
+! Last updated: 2024-07-23T00:51:27.990Z
 ! Version: 824cb6a
 ! Expires: 5 days
 ! License: https://github.com/johannes-Andersen/partall/blob/main/LICENSE
