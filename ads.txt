@@ -1,10 +1,10 @@
 [uBlock Origin]
-! Diff-Path: patches/ads/ads_a0cfa36d-478249-24.patch
+! Diff-Path: patches/ads/ads_824cb6a9-478249-24.patch
 ! Title: Partall Filter List - Ads
 ! Description: uBlock Origin filter list for blocking ads, to be used in conjunction with other general purpose filter lists.
-! Last modified: 2024-07-23T00:46:32.543Z
-! Last updated: 2024-07-23T00:46:32.543Z
-! Version: a0cfa36
+! Last modified: 2024-07-23T00:51:28.456Z
+! Last updated: 2024-07-23T00:51:28.456Z
+! Version: 824cb6a
 ! Expires: 5 days
 ! License: https://github.com/johannes-Andersen/partall/blob/main/LICENSE
 ! Homepage: https://github.com/johannes-Andersen/partall
@@ -17,7 +17,3 @@ www.kode24.no##.adunit-wrapper
 www.kode24.no##.commercial
 www.kode24.no###banner-top-wide-container
 www.kode24.no##+js(json-prune-fetch-response, partners companyPartners contentTiles.[-].adlink jobAdsSanity.[-].adlink content.[-].id)
-
-www.kode24.no##.dummy-ad
-www.kode24.no##.super-ad
-www.kode24.no##even-more
