@@ -1,5 +1,5 @@
 [uBlock Origin]
-! Diff-Path: patches/ads/ads_2c6dc6b0-478248-24.patch
+! Diff-Path: patches/ads/ads_1f967642-478248-24.patch
 ! Title: Partall Filter List - Ads
 ! Description: uBlock Origin filter list for blocking ads, to be used in conjunction with other general purpose filter lists.
 ! Last modified: 2024-07-23T00:05:33.849Z
