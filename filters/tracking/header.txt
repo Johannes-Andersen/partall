@@ -4,6 +4,7 @@
 ! Last modified: {{last_modified}}
 ! Last updated: {{last_modified}}
 ! Version: {{version}}
-! Expires: 5 days
+! Expires: 3 days
+! Diff-Expires: 12 hours
 ! License: https://github.com/johannes-Andersen/partall/blob/main/LICENSE
 ! Homepage: https://github.com/johannes-Andersen/partall

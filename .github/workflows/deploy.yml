@@ -95,7 +95,7 @@ jobs:
         run: |
           patch_name=$(echo ${{ matrix.list }} | tr '[:upper:]' '[:lower:]')_$(echo ${{ inputs.current_sha }} | cut -c1-8)
           mkdir -p deploy-branch/patches/${{ matrix.list }}
-          pnpm exec diff-builder build -c -v -n "$patch_name" -t 24 old/${{ matrix.list }}.txt deploy-branch/${{ matrix.list }}.txt deploy-branch/patches/${{ matrix.list }}
+          pnpm exec diff-builder build -c -v -n "$patch_name" -t 12 old/${{ matrix.list }}.txt deploy-branch/${{ matrix.list }}.txt deploy-branch/patches/${{ matrix.list }}
 
       - name: Commit and push changes
         run: |
