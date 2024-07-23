@@ -1,4 +1,5 @@
 [uBlock Origin]
+! Diff-Path: patches/annoyances/annoyances_2c6dc6b0-478248-24.patch
 ! Title: Partall Filter List - Annoyances
 ! Description: uBlock Origin filter list for annoyances, like cookie warnings, newsletter popups, etc.
 ! Last modified: 2024-07-23T00:05:32.870Z
