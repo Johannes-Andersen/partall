@@ -1,10 +1,11 @@
 [uBlock Origin]
-! Diff-Path: patches/tracking/tracking_2c6dc6b0-478248-24.patch
+! Diff-Path: patches/tracking/tracking_824cb6a9-478249-24.patch
 ! Title: Partall Filter List - Tracking
 ! Description: uBlock Origin filter list for blocking tracking, to be used in conjunction with other general purpose filter lists.
-! Last modified: 2024-07-22T01:27:18.478Z
-! Version: 4f9e2cd
-! Expires: 1 day
+! Last modified: 2024-07-23T00:49:41.944Z
+! Last updated: 2024-07-23T00:49:41.944Z
+! Version: 824cb6a
+! Expires: 5 days
 ! License: https://github.com/johannes-Andersen/partall/blob/main/LICENSE
 ! Homepage: https://github.com/johannes-Andersen/partall
 
@@ -31,4 +32,3 @@
 ||shopgun.com^$third-party
 ||raygun.io$third-party
 ||piano.io^$third-party
-
