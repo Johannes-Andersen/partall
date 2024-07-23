@@ -22,3 +22,4 @@ foodora.no##+js(acis, _pxAppId)
 ||shopgun.com^$third-party
 ||raygun.io$third-party
 ||piano.io^$third-party
+||api.cevoid.com/analytics/
