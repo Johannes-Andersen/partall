@@ -1,16 +1,12 @@
 [uBlock Origin]
-! Diff-Path: patches/annoyances/annoyances_a0cfa36d-478249-24.patch
+! Diff-Path: patches/annoyances/annoyances_824cb6a9-478249-24.patch
 ! Title: Partall Filter List - Annoyances
 ! Description: uBlock Origin filter list for annoyances, like cookie warnings, newsletter popups, etc.
-! Last modified: 2024-07-23T00:46:33.087Z
-! Last updated: 2024-07-23T00:46:33.087Z
-! Version: a0cfa36
+! Last modified: 2024-07-23T00:51:29.315Z
+! Last updated: 2024-07-23T00:51:29.315Z
+! Version: 824cb6a
 ! Expires: 5 days
 ! License: https://github.com/johannes-Andersen/partall/blob/main/LICENSE
 ! Homepage: https://github.com/johannes-Andersen/partall
 
 vanillatweaks.net##+js(nano-sib, downloadTimer)
-
-www.example.no##.dummy-popup
-www.nope.no##.down-over
-www.example-sire.no##.now-maybe
