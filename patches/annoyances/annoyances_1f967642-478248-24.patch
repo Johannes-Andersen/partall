@@ -1,0 +1,16 @@
+diff checksum:39af7bf050ca796ee93a97c3d0d37751e37c54d3 lines:14
+d2 1
+a2 1
+! Diff-Path: patches/annoyances/annoyances_a0cfa36d-478249-24.patch
+d5 4
+a8 4
+! Last modified: 2024-07-23T00:46:33.087Z
+! Last updated: 2024-07-23T00:46:33.087Z
+! Version: a0cfa36
+! Expires: 5 days
+d13 1
+a13 4
+
+www.example.no##.dummy-popup
+www.nope.no##.down-over
+www.example-sire.no##.now-maybe
