@@ -16,6 +16,7 @@
 ||qualitymetrics.tv2.no^
 ||cdn.nav.no/personbruker/decorator-next/public/assets/amplitude$script
 ||oda.com/api/v1/metrics/$ping
+foodora.no##+js(acis, _pxAppId)
 
 ! Generic tracking providers
 ||shopgun.com^$third-party
