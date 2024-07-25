@@ -1,8 +1,8 @@
 vanillatweaks.net##fieldset.banner-spot
 
-www.kode24.no###diamond-partners-list-tile
 www.kode24.no##.commercial-content
 www.kode24.no##.adunit-wrapper
 www.kode24.no##.commercial
+www.kode24.no###diamond-partners-list-tile
 www.kode24.no###banner-top-wide-container
-www.kode24.no##+js(json-prune-fetch-response, partners companyPartners contentTiles.[-].adlink jobAdsSanity.[-].adlink content.[-].id)
+www.kode24.no##+js(json-prune-fetch-response, partners companyPartners contentTiles.[-].adlink jobAdsSanity.[-].adlink content.[-].id, , propsToMatch, url:/api/frontpage)

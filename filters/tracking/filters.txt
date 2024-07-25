@@ -1,6 +1,7 @@
 ! URL Param trackers
 ||komplett.no^$removeparam=productList
 ||komplett.no^$removeparam=position
+$doc,removeparam=ref,domain=arcjet.com|vercel.com
 
 ! Site specific trackers
 ||vanillatweaks.net/assets/server/log-error.php
@@ -16,6 +17,12 @@
 ||qualitymetrics.tv2.no^
 ||cdn.nav.no/personbruker/decorator-next/public/assets/amplitude$script
 ||oda.com/api/v1/metrics/$ping
+||astro.build/_web-vitals^
+||t3.gg/api/event$xhr
+||kentcdodds.com/assets/performance-$script
+
+! Scriptlets - Spite specific trackers
+t3.gg##+js(set-local-storage-item, plausible_ignore, true)
 foodora.no##+js(acis, _pxAppId)
 
 ! Generic tracking providers
