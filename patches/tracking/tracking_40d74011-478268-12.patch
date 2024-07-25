@@ -1,0 +1,21 @@
+diff checksum:5feb596f6192573713718859438951daf2f28c9f lines:19
+d2 1
+a2 1
+! Diff-Path: patches/tracking/tracking_7ff9bb68-478296-12.patch
+d5 3
+a7 3
+! Last modified: 2024-07-25T00:02:00.858Z
+! Last updated: 2024-07-25T00:02:00.858Z
+! Version: 7ff9bb6
+a15 1
+$doc,removeparam=ref,domain=arcjet.com|vercel.com
+a30 6
+||astro.build/_web-vitals^
+||t3.gg/api/event$xhr
+||kentcdodds.com/assets/performance-$script
+
+! Scriptlets - Spite specific trackers
+t3.gg##+js(set-local-storage-item, plausible_ignore, true)
+d37 1
+a37 1
+||api.cevoid.com/analytics/
