@@ -1,0 +1,15 @@
+diff checksum:7c4d5615ec96983adfa1f1da80e6871f88fb4433 lines:14
+d2 1
+a2 1
+! Diff-Path: patches/ads/ads_7ff9bb68-478296-12.patch
+d5 3
+a7 3
+! Last modified: 2024-07-25T00:01:39.449Z
+! Last updated: 2024-07-25T00:01:39.449Z
+! Version: 7ff9bb6
+d15 1
+a18 1
+www.kode24.no###diamond-partners-list-tile
+d20 1
+a20 1
+www.kode24.no##+js(json-prune-fetch-response, partners companyPartners contentTiles.[-].adlink jobAdsSanity.[-].adlink content.[-].id, , propsToMatch, url:/api/frontpage)
