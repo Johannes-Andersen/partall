@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/devcontainers/javascript-node:22@sha256:e2228dfc5285942804c12b897f914e3262e9bba48c2ff473bad8b9fbd9bf7d26
+FROM mcr.microsoft.com/devcontainers/javascript-node:22@sha256:aedf26ccde02f734a8d8879778f5daac6c71609bb1df1b5a3e9d708f3c2827a2
 
 RUN SNIPPET="export PROMPT_COMMAND='history -a' && export HISTFILE=/commandhistory/.bash_history" \
     && echo "$SNIPPET" >> "/root/.bashrc"
