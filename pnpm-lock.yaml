@@ -66,8 +66,8 @@ packages:
     resolution: {integrity: sha512-BOehWE7MgQ8W8Qn0CQnMtg2tHPHPulcS/5AVpFvs2KCK1ET+0WqZqPvnpRpFN81gYoFopdIEJX9Sgjw3ZBccPg==}
     engines: {node: '>=6.9.0'}
 
-  '@babel/runtime@7.25.0':
-    resolution: {integrity: sha512-7dRy4DwXwtzBrPbZflqxnvfxLF8kdZXPkhymtDeFoFqE6ldzjQFgYTtYIFARcLEYDrqfBfYcZt1WqFxRoyC9Rw==}
+  '@babel/runtime@7.25.4':
+    resolution: {integrity: sha512-DSgLeL/FNcpXuzav5wfYvHCGvynXkJbn3Zvc3823AEe9nPwW9IK4UoCSS5yGymmQzN0pCPvivtgS6/8U2kkm1w==}
     engines: {node: '>=6.9.0'}
 
   '@biomejs/biome@1.8.3':
@@ -162,8 +162,8 @@ packages:
   '@types/mute-stream@0.0.4':
     resolution: {integrity: sha512-CPM9nzrCPPJHQNA9keH9CVkVI+WR5kMa+7XEs5jcGQ0VoAGnLv242w8lIVgwAEfmE4oufJRaTc9PNLQl0ioAow==}
 
-  '@types/node@20.16.0':
-    resolution: {integrity: sha512-vDxceJcoZhIVh67S568bm1UGZO0DX0hpplJZxzeXMKwIPLn190ec5RRxQ69BKhX44SUGIxxgMdDY557lGLKprQ==}
+  '@types/node@20.16.1':
+    resolution: {integrity: sha512-zJDo7wEadFtSyNz5QITDfRcrhqDvQI1xQNQ0VoizPjM/dVAODqqIUWbJPkvsxmTI0MYRGRikcdjMPhOssnPejQ==}
 
   '@types/parse-json@4.0.2':
     resolution: {integrity: sha512-dISoDXWWQwUquiKsyZ4Ng+HX2KsPL7LyHKHQwgGFEA3IaKac4Obd+h2a/a6waisAoepJlBcx9paWqjA8/HVjCw==}
@@ -290,8 +290,8 @@ packages:
     resolution: {integrity: sha512-I5qxpzLv+sJhTVEoLYNcTW+bThDCPsit0vLNKShZx6rLtpilNpmmeTPaeqJb9ZE9dV3DGaeby6Vuhrw38WjeyQ==}
     engines: {node: ^14.18.0 || >=16.10.0}
 
-  core-js-pure@3.38.0:
-    resolution: {integrity: sha512-8balb/HAXo06aHP58mZMtXgD8vcnXz9tUDePgqBgJgKdmTlMt+jw3ujqniuBDQXMvTzxnMpxHFeuSM3g1jWQuQ==}
+  core-js-pure@3.38.1:
+    resolution: {integrity: sha512-BY8Etc1FZqdw1glX0XNOq2FDwfrg/VGqoZOZCdaL+UmdaqDwQwYXkMJT4t6In+zfEfOJDcM9T0KdbBeJg8KKCQ==}
 
   cosmiconfig@7.1.0:
     resolution: {integrity: sha512-AdmX6xUzdNASswsFtmwSt7Vj8po9IuqXm0UXz7QKPuEUmPB4XyjGfaAr2PSuELMwkRMVH1EpIkX5bTZGRB3eCA==}
@@ -512,8 +512,8 @@ packages:
     resolution: {integrity: sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==}
     engines: {node: '>= 8'}
 
-  micromatch@4.0.7:
-    resolution: {integrity: sha512-LPP/3KorzCwBxfeUuZmaR6bG2kdeHSbe0P2tY3FLRU4vYrjYz5hI4QZwV0njUx3jeuKe67YukQ1LSPZBKDqO/Q==}
+  micromatch@4.0.8:
+    resolution: {integrity: sha512-PXwfBhYu0hBCPw8Dn0E+WDYb7af3dSLVWKi3HGv84IdF4TyFoC0ysxFd0Goxw7nSv4T/PzEJQxsYsEiFCKo2BA==}
     engines: {node: '>=8.6'}
 
   mimic-fn@2.1.0:
@@ -694,15 +694,15 @@ packages:
   tldts-core@5.7.112:
     resolution: {integrity: sha512-mutrEUgG2sp0e/MIAnv9TbSLR0IPbvmAImpzqul5O/HJ2XM1/I1sajchQ/fbj0fPdA31IiuWde8EUhfwyldY1Q==}
 
-  tldts-core@6.1.39:
-    resolution: {integrity: sha512-+Qib8VaRq6F56UjP4CJXd30PI4s3hFumDywUlsbiEWoA8+lfAaWNTLr3e6/zZOgHzVyon4snHaybeFHd8C0j/A==}
+  tldts-core@6.1.41:
+    resolution: {integrity: sha512-SkwZgo1ZzMp2ziMBwci5VBnLR9VywCi02jSgMX5TO5kf9fdaBsxZkblLff3NlJNTcH0vfvEsgw2B7jVR556Vgw==}
 
   tldts@5.7.112:
     resolution: {integrity: sha512-6VSJ/C0uBtc2PQlLsp4IT8MIk2UUh6qVeXB1HZtK+0HiXlAPzNcfF3p2WM9RqCO/2X1PIa4danlBLPoC2/Tc7A==}
     hasBin: true
 
-  tldts@6.1.39:
-    resolution: {integrity: sha512-UCGXcPhYIUELc+FifEeDXYkoTWNU6iOEdM/Q5LsvkTz2SnpQ3q5onA+DiiZlR5YDskMhfK1YBQDeWL7PH9/miQ==}
+  tldts@6.1.41:
+    resolution: {integrity: sha512-RNpUkL5fYD2DTQQCdr8QMDp6UL0ThtpXT3q3+qPE05dIT+RK2I3M0VByVbQN1dEhLUGzimivVwxK2By9epLk6w==}
     hasBin: true
 
   to-regex-range@5.0.1:
@@ -716,8 +716,8 @@ packages:
     resolution: {integrity: sha512-t0rzBq87m3fVcduHDUFhKmyyX+9eo6WQjZvf51Ea/M0Q7+T374Jp1aUiyUl0GKxp8M/OETVHSDvmkyPgvX+X2w==}
     engines: {node: '>=10'}
 
-  undici-types@6.19.6:
-    resolution: {integrity: sha512-e/vggGopEfTKSvj4ihnOLTsqhrKRN3LeO6qSN/GxohhuRv8qH9bNQ4B8W7e/vFL+0XTnmHPB4/kegunZGA4Org==}
+  undici-types@6.19.8:
+    resolution: {integrity: sha512-ve2KP6f/JnbPBFyobGHuerC9g1FYGn/F8n1LWTwNxCEzd6IfqTwUQcNXgEtmmQ6DlRrC1hrSrBnCZPokRrDHjw==}
 
   universalify@2.0.1:
     resolution: {integrity: sha512-gptHNQghINnc/vTGIk0SOFGFNXw7JVrlRUtConJRlvaw6DuX0wO5Jeko9sWrMBhh+PsYAZ7oXAiOnf/UKogyiw==}
@@ -808,7 +808,7 @@ snapshots:
       consola: 3.2.3
       glob: 10.4.5
       node-fetch: 2.7.0
-      tldts: 6.1.39
+      tldts: 6.1.41
       yargs: 17.7.2
     transitivePeerDependencies:
       - encoding
@@ -825,7 +825,7 @@ snapshots:
 
   '@adguard/scriptlets@1.11.16':
     dependencies:
-      '@babel/runtime': 7.25.0
+      '@babel/runtime': 7.25.4
       js-yaml: 3.14.1
 
   '@babel/code-frame@7.24.7':
@@ -844,10 +844,10 @@ snapshots:
 
   '@babel/runtime-corejs3@7.25.0':
     dependencies:
-      core-js-pure: 3.38.0
+      core-js-pure: 3.38.1
       regenerator-runtime: 0.14.1
 
-  '@babel/runtime@7.25.0':
+  '@babel/runtime@7.25.4':
     dependencies:
       regenerator-runtime: 0.14.1
 
@@ -898,7 +898,7 @@ snapshots:
     dependencies:
       '@inquirer/type': 1.5.2
       '@types/mute-stream': 0.0.4
-      '@types/node': 20.16.0
+      '@types/node': 20.16.1
       '@types/wrap-ansi': 3.0.0
       ansi-escapes: 4.3.2
       chalk: 4.1.2
@@ -949,11 +949,11 @@ snapshots:
 
   '@types/mute-stream@0.0.4':
     dependencies:
-      '@types/node': 20.16.0
+      '@types/node': 20.16.1
 
-  '@types/node@20.16.0':
+  '@types/node@20.16.1':
     dependencies:
-      undici-types: 6.19.6
+      undici-types: 6.19.8
 
   '@types/parse-json@4.0.2': {}
 
@@ -1075,7 +1075,7 @@ snapshots:
 
   consola@3.2.3: {}
 
-  core-js-pure@3.38.0: {}
+  core-js-pure@3.38.1: {}
 
   cosmiconfig@7.1.0:
     dependencies:
@@ -1134,7 +1134,7 @@ snapshots:
       '@nodelib/fs.walk': 1.2.8
       glob-parent: 5.1.2
       merge2: 1.4.1
-      micromatch: 4.0.7
+      micromatch: 4.0.8
 
   fastq@1.17.1:
     dependencies:
@@ -1263,7 +1263,7 @@ snapshots:
 
   merge2@1.4.1: {}
 
-  micromatch@4.0.7:
+  micromatch@4.0.8:
     dependencies:
       braces: 3.0.3
       picomatch: 2.3.1
@@ -1423,15 +1423,15 @@ snapshots:
 
   tldts-core@5.7.112: {}
 
-  tldts-core@6.1.39: {}
+  tldts-core@6.1.41: {}
 
   tldts@5.7.112:
     dependencies:
       tldts-core: 5.7.112
 
-  tldts@6.1.39:
+  tldts@6.1.41:
     dependencies:
-      tldts-core: 6.1.39
+      tldts-core: 6.1.41
 
   to-regex-range@5.0.1:
     dependencies:
@@ -1441,7 +1441,7 @@ snapshots:
 
   type-fest@0.21.3: {}
 
-  undici-types@6.19.6: {}
+  undici-types@6.19.8: {}
 
   universalify@2.0.1: {}
 
