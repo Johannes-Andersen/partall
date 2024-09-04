@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@adguard/aglint':
-        specifier: 2.0.9
-        version: 2.0.9
+        specifier: 2.0.10
+        version: 2.0.10
       '@adguard/dead-domains-linter':
         specifier: 1.0.19
         version: 1.0.19
@@ -26,8 +26,8 @@ importers:
 
 packages:
 
-  '@adguard/aglint@2.0.9':
-    resolution: {integrity: sha512-1xnQdGNwk6xb9m8YyxbaMLbSTQ59tehlwv7P92O7MqIMFLoLJy70HPrx3JOTj+GRrSNQOuJFHJnl7LVvF7pyUw==}
+  '@adguard/aglint@2.0.10':
+    resolution: {integrity: sha512-gv04PUw0M9sPYbdiN5HIc4paBNvPbKpOEKmXJplcU0F5/k2vYREVwrtKS8YvezbSOGR4cUL/AjVsqiY4O8SjfQ==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -773,7 +773,7 @@ packages:
 
 snapshots:
 
-  '@adguard/aglint@2.0.9':
+  '@adguard/aglint@2.0.10':
     dependencies:
       '@adguard/agtree': 1.1.8
       '@inquirer/checkbox': 1.5.2
