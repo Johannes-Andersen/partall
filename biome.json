@@ -21,7 +21,8 @@
       "complexity": {
         "noForEach": "off",
         "useSimplifiedLogicExpression": "error",
-        "useDateNow": "error"
+        "useDateNow": "error",
+        "noUselessStringConcat": "error"
       },
       "style": {
         "noShoutyConstants": "error",
@@ -36,7 +37,6 @@
       "nursery": {
         "noDuplicateJsonKeys": "error",
         "useErrorMessage": "error",
-        "noUselessStringConcat": "error",
         "noDuplicateElseIf": "error"
       }
     }
