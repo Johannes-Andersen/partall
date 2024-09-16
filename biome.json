@@ -10,7 +10,8 @@
       "correctness": {
         "noUndeclaredVariables": "error",
         "noConstantMathMinMaxClamp": "error",
-        "noUnusedImports": "error"
+        "noUnusedImports": "error",
+        "noUndeclaredDependencies": "error"
       },
       "performance": {
         "noReExportAll": "error",
@@ -36,7 +37,6 @@
         "noDuplicateJsonKeys": "error",
         "useErrorMessage": "error",
         "noUselessStringConcat": "error",
-        "noUndeclaredDependencies": "error",
         "noDuplicateElseIf": "error"
       }
     }
