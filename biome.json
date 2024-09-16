@@ -33,10 +33,10 @@
       "suspicious": {
         "useAwait": "error",
         "noSkippedTests": "warn",
-        "useErrorMessage": "error"
+        "useErrorMessage": "error",
+        "noDuplicateObjectKeys": "error"
       },
       "nursery": {
-        "noDuplicateJsonKeys": "error",
         "noDuplicateElseIf": "error"
       }
     }
