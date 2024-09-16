@@ -10,7 +10,8 @@
       "correctness": {
         "noUndeclaredVariables": "error",
         "noConstantMathMinMaxClamp": "error",
-        "noUnusedImports": "error"
+        "noUnusedImports": "error",
+        "noUndeclaredDependencies": "error"
       },
       "performance": {
         "noReExportAll": "error",
@@ -19,7 +20,9 @@
       },
       "complexity": {
         "noForEach": "off",
-        "useSimplifiedLogicExpression": "error"
+        "useSimplifiedLogicExpression": "error",
+        "useDateNow": "error",
+        "noUselessStringConcat": "error"
       },
       "style": {
         "noShoutyConstants": "error",
@@ -29,14 +32,11 @@
       },
       "suspicious": {
         "useAwait": "error",
-        "noSkippedTests": "warn"
+        "noSkippedTests": "warn",
+        "useErrorMessage": "error",
+        "noDuplicateObjectKeys": "error"
       },
       "nursery": {
-        "noDuplicateJsonKeys": "error",
-        "useErrorMessage": "error",
-        "useDateNow": "error",
-        "noUselessStringConcat": "error",
-        "noUndeclaredDependencies": "error",
         "noDuplicateElseIf": "error"
       }
     }
