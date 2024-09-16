@@ -32,11 +32,11 @@
       },
       "suspicious": {
         "useAwait": "error",
-        "noSkippedTests": "warn"
+        "noSkippedTests": "warn",
+        "useErrorMessage": "error"
       },
       "nursery": {
         "noDuplicateJsonKeys": "error",
-        "useErrorMessage": "error",
         "noDuplicateElseIf": "error"
       }
     }
