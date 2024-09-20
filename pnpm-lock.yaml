@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@adguard/aglint':
-        specifier: 2.1.0
-        version: 2.1.0
+        specifier: 2.1.1
+        version: 2.1.1
       '@adguard/dead-domains-linter':
         specifier: 1.0.19
         version: 1.0.19
@@ -26,8 +26,8 @@ importers:
 
 packages:
 
-  '@adguard/aglint@2.1.0':
-    resolution: {integrity: sha512-SjXAlufcen/Mp10X/UtFMeGBjJQEP5IPgAjVTGffhyAbii87yXiz98EBjCUbQ4h8TlO6VCzAgw9PPd+xX94Wkw==}
+  '@adguard/aglint@2.1.1':
+    resolution: {integrity: sha512-Q7c7A9obUcIhmxG7b1iWHahAZ/rhdg/G+1AWDy3wzKrWfWLdnMSLj1Zd26cOAjmNMwsblldWw2HuDc+Kbvt66Q==}
     engines: {node: '>=17'}
     hasBin: true
 
@@ -794,7 +794,7 @@ packages:
 
 snapshots:
 
-  '@adguard/aglint@2.1.0':
+  '@adguard/aglint@2.1.1':
     dependencies:
       '@adguard/agtree': 2.0.2
       '@adguard/ecss-tree': 1.1.0
