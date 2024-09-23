@@ -35,12 +35,12 @@ packages:
     resolution: {integrity: sha512-5k9bYA+JSfZgYTvwahkM8ihIf1fvP+RxA1dKLgkRIGa6ixOSWNKv/pN0Rpiy0DwZJbC9X/OeZrtdW66jASH/JA==}
     engines: {node: '>=14'}
 
-  '@adguard/agtree@2.0.2':
-    resolution: {integrity: sha512-T+fH4qi+UBM8xVQyxPbw8bagCkeBvBbf2AzQYaP3YqO++pmuhTSBE5uYChwH+ZJSQaFjCTACVxdsEbsA5UFyqg==}
-    engines: {node: '>=17'}
+  '@adguard/agtree@2.1.2':
+    resolution: {integrity: sha512-4X7LsKMfQUo90TXVoZedHVjUS0zEDxAvMx0+JtYp2RwarmxVZYOIGygZPOoa6ihwUxUd3fmrsX0c6SQMldA+8Q==}
+    engines: {node: '>=18'}
 
-  '@adguard/css-tokenizer@1.0.0':
-    resolution: {integrity: sha512-23yhZWGZ4+XuYQslzvORx8fwsUmVOOQgyJcGOpyaH097KOJTniVF9UeaxEZpdJIhErJ6zDqPx2ifGer5QdZ0zw==}
+  '@adguard/css-tokenizer@1.1.1':
+    resolution: {integrity: sha512-oDNlMegMJIRZ9v6JuAXFOQzTmkKz3ERILV9rTvbWYLDApOZ8jqwil1fEeJbjGFR37OHN6MVU55ef9NcxZCZrig==}
 
   '@adguard/dead-domains-linter@1.0.19':
     resolution: {integrity: sha512-ebzg+InC8DzgthuCpQVOplx3bKt10Snq2B+nocCbUuuYFtyHMBgMd1LO7kKahWLf1Z4Yjb/vaeoS3c5u2szjyA==}
@@ -54,8 +54,8 @@ packages:
   '@adguard/ecss-tree@1.1.0':
     resolution: {integrity: sha512-Qs7cpUH5AexO9JAXxMPmh6CwdNEnP1qUBSpvHnGxPmHQDjBzpAn4qz8zsJILmX4Rc5Up0iqeYcYC7Pq5HBvoyQ==}
 
-  '@adguard/scriptlets@1.11.27':
-    resolution: {integrity: sha512-Renm7Okgb2y8ihitKnU/RXV4Hk1eKcbA5Vmxq4kyQ0Eiah3vd+IHR4UZp3yxkhSC9DkiziWKui1l7UASF8wvQQ==}
+  '@adguard/scriptlets@1.12.1':
+    resolution: {integrity: sha512-luAGl8hHEjKZfTFqWG8PBsif2wAPWNi0uuT+xzyBTk+IllHDYOLPSwyMKh2ru7nKCQJEOgMVwNoIrPB4zuuX1w==}
 
   '@babel/code-frame@7.24.7':
     resolution: {integrity: sha512-BcYH1CVJBO9tvyIZ2jVeXgSIMvGZ2FDRvDdOIVQyuklNKSsx+eppDEBq/g47Ayw+RqNFE+URvOShmf+f/qwAlA==}
@@ -712,15 +712,15 @@ packages:
   tldts-core@5.7.112:
     resolution: {integrity: sha512-mutrEUgG2sp0e/MIAnv9TbSLR0IPbvmAImpzqul5O/HJ2XM1/I1sajchQ/fbj0fPdA31IiuWde8EUhfwyldY1Q==}
 
-  tldts-core@6.1.46:
-    resolution: {integrity: sha512-zA3ai/j4aFcmbqTvTONkSBuWs0Q4X4tJxa0gV9sp6kDbq5dAhQDSg0WUkReEm0fBAKAGNj+wPKCCsR8MYOYmwA==}
+  tldts-core@6.1.47:
+    resolution: {integrity: sha512-6SWyFMnlst1fEt7GQVAAu16EGgFK0cLouH/2Mk6Ftlwhv3Ol40L0dlpGMcnnNiiOMyD2EV/aF3S+U2nKvvLvrA==}
 
   tldts@5.7.112:
     resolution: {integrity: sha512-6VSJ/C0uBtc2PQlLsp4IT8MIk2UUh6qVeXB1HZtK+0HiXlAPzNcfF3p2WM9RqCO/2X1PIa4danlBLPoC2/Tc7A==}
     hasBin: true
 
-  tldts@6.1.46:
-    resolution: {integrity: sha512-fw81lXV2CijkNrZAZvee7wegs+EOlTyIuVl/z4q6OUzZHQ1jGL2xQzKXq9geYf/1tzo9LZQLrkcko2m8HLh+rg==}
+  tldts@6.1.47:
+    resolution: {integrity: sha512-R/K2tZ5MiY+mVrnSkNJkwqYT2vUv1lcT6wJvd2emGaMJ7PHUGRY4e3tUsdFCXgqxi2QgbHjL3yJgXCo40v9Hxw==}
     hasBin: true
 
   to-regex-range@5.0.1:
@@ -796,7 +796,7 @@ snapshots:
 
   '@adguard/aglint@2.1.1':
     dependencies:
-      '@adguard/agtree': 2.0.2
+      '@adguard/agtree': 2.1.2
       '@adguard/ecss-tree': 1.1.0
       '@inquirer/checkbox': 1.5.2
       '@inquirer/select': 1.3.3
@@ -817,16 +817,16 @@ snapshots:
   '@adguard/agtree@1.1.8':
     dependencies:
       '@adguard/ecss-tree': 1.1.0
-      '@adguard/scriptlets': 1.11.27
+      '@adguard/scriptlets': 1.12.1
       clone-deep: 4.0.1
       json5: 2.2.3
       semver: 7.6.3
       tldts: 5.7.112
       xregexp: 5.1.1
 
-  '@adguard/agtree@2.0.2':
+  '@adguard/agtree@2.1.2':
     dependencies:
-      '@adguard/css-tokenizer': 1.0.0
+      '@adguard/css-tokenizer': 1.1.1
       clone-deep: 4.0.1
       is-ip: 3.1.0
       json5: 2.2.3
@@ -836,7 +836,7 @@ snapshots:
       xregexp: 5.1.1
       zod: 3.21.4
 
-  '@adguard/css-tokenizer@1.0.0': {}
+  '@adguard/css-tokenizer@1.1.1': {}
 
   '@adguard/dead-domains-linter@1.0.19':
     dependencies:
@@ -844,7 +844,7 @@ snapshots:
       consola: 3.2.3
       glob: 10.4.5
       node-fetch: 2.7.0
-      tldts: 6.1.46
+      tldts: 6.1.47
       yargs: 17.7.2
     transitivePeerDependencies:
       - encoding
@@ -859,8 +859,9 @@ snapshots:
     dependencies:
       css-tree: 2.3.1
 
-  '@adguard/scriptlets@1.11.27':
+  '@adguard/scriptlets@1.12.1':
     dependencies:
+      '@adguard/agtree': 2.1.2
       '@babel/runtime': 7.25.6
       js-yaml: 3.14.1
 
@@ -1467,15 +1468,15 @@ snapshots:
 
   tldts-core@5.7.112: {}
 
-  tldts-core@6.1.46: {}
+  tldts-core@6.1.47: {}
 
   tldts@5.7.112:
     dependencies:
       tldts-core: 5.7.112
 
-  tldts@6.1.46:
+  tldts@6.1.47:
     dependencies:
-      tldts-core: 6.1.46
+      tldts-core: 6.1.47
 
   to-regex-range@5.0.1:
     dependencies:
