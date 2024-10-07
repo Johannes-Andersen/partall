@@ -18,10 +18,10 @@
     "dead-domains": "dead-domains-linter -s -i **/filters.txt",
     "dead-domains:fix": "dead-domains-linter -a -i **/filters.txt"
   },
-  "packageManager": "pnpm@9.12.0",
+  "packageManager": "pnpm@9.12.1",
   "engines": {
     "node": "22.9.0",
-    "pnpm": "9.12.0"
+    "pnpm": "9.12.1"
   },
   "dependencies": {
     "@adguard/aglint": "2.1.1",
