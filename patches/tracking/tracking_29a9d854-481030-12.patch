@@ -1,0 +1,11 @@
+diff checksum:03b950d7a450f2ee4d740f0a52cef6abacf8439f lines:10
+d2 1
+a2 1
+! Diff-Path: patches/tracking/tracking_532795e4-481031-12.patch
+d5 3
+a7 3
+! Last modified: 2024-11-15T22:40:29.839Z
+! Last updated: 2024-11-15T22:40:29.839Z
+! Version: 532795e
+a40 1
+subjekt.no##+js(set-local-storage-item, plausible_ignore, true)
