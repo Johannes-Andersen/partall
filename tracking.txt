@@ -1,10 +1,10 @@
 [uBlock Origin]
-! Diff-Path: patches/tracking/tracking_eebe7ae4-481030-12.patch
+! Diff-Path: patches/tracking/tracking_29a9d854-481030-12.patch
 ! Title: Partall Filter List - Tracking
 ! Description: uBlock Origin filter list for blocking tracking, to be used in conjunction with other general purpose filter lists.
-! Last modified: 2024-11-15T21:47:47.384Z
-! Last updated: 2024-11-15T21:47:47.384Z
-! Version: eebe7ae
+! Last modified: 2024-11-15T21:54:03.575Z
+! Last updated: 2024-11-15T21:54:03.575Z
+! Version: 29a9d85
 ! Expires: 3 days
 ! Diff-Expires: 12 hours
 ! License: https://github.com/johannes-Andersen/partall/blob/main/LICENSE
@@ -33,6 +33,7 @@ $doc,removeparam=ref,domain=arcjet.com|vercel.com
 ||t3.gg/api/event$xhr
 ||kentcdodds.com/assets/performance-$script
 ||static.nrk.no/core-analytics/$script
+||static.nrk.no/nrkno-snowplow/$script
 
 ! Scriptlets - Spite specific trackers
 t3.gg##+js(set-local-storage-item, plausible_ignore, true)

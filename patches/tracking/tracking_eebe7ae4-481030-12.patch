@@ -1,0 +1,11 @@
+diff checksum:335849821f2c46f53059cf02cb6ebcb39c6d6767 lines:10
+d2 1
+a2 1
+! Diff-Path: patches/tracking/tracking_29a9d854-481030-12.patch
+d5 3
+a7 3
+! Last modified: 2024-11-15T21:54:03.575Z
+! Last updated: 2024-11-15T21:54:03.575Z
+! Version: 29a9d85
+a35 1
+||static.nrk.no/nrkno-snowplow/$script
