@@ -21,6 +21,7 @@ $doc,removeparam=ref,domain=arcjet.com|vercel.com
 ||t3.gg/api/event$xhr
 ||kentcdodds.com/assets/performance-$script
 ||static.nrk.no/core-analytics/$script
+||static.nrk.no/nrkno-snowplow/$script
 
 ! Scriptlets - Spite specific trackers
 t3.gg##+js(set-local-storage-item, plausible_ignore, true)
