@@ -26,6 +26,7 @@ $doc,removeparam=ref,domain=arcjet.com|vercel.com
 ! Scriptlets - Spite specific trackers
 t3.gg##+js(set-local-storage-item, plausible_ignore, true)
 foodora.no##+js(acis, _pxAppId)
+subjekt.no##+js(set-local-storage-item, plausible_ignore, true)
 
 ! Generic tracking providers
 ||shopgun.com^$third-party
