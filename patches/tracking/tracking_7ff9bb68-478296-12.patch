@@ -1,0 +1,14 @@
+diff checksum:9c39df01a40f34c42c0798233bbee3fe836ecb99 lines:13
+d2 1
+a2 1
+! Diff-Path: patches/tracking/tracking_eebe7ae4-481030-12.patch
+d5 3
+a7 3
+! Last modified: 2024-11-15T21:47:47.384Z
+! Last updated: 2024-11-15T21:47:47.384Z
+! Version: eebe7ae
+a34 1
+||static.nrk.no/core-analytics/$script
+d44 1
+a44 1
+||api.cevoid.com/analytics/
