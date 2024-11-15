@@ -1,0 +1,12 @@
+diff checksum:10398c1c6fec4dd8c3366a32c37ef7a795b3594d lines:11
+d2 1
+a2 1
+! Diff-Path: patches/ads/ads_5dac4830-481030-12.patch
+d5 3
+a7 3
+! Last modified: 2024-11-15T22:13:40.185Z
+! Last updated: 2024-11-15T22:13:40.185Z
+! Version: 5dac483
+d20 1
+a20 1
+www.kode24.no##+js(json-prune-fetch-response, companyPartners.[-].slug contentTiles.[-].adlink contentTiles.[-].adlink jobAdsSanity.[-].adlink, , propsToMatch, url:/api/frontpage)
