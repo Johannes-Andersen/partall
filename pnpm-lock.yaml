@@ -35,8 +35,8 @@ packages:
     resolution: {integrity: sha512-5k9bYA+JSfZgYTvwahkM8ihIf1fvP+RxA1dKLgkRIGa6ixOSWNKv/pN0Rpiy0DwZJbC9X/OeZrtdW66jASH/JA==}
     engines: {node: '>=14'}
 
-  '@adguard/agtree@2.1.3':
-    resolution: {integrity: sha512-Kf429Mq1cBtgOPbCtZH1cNI50DxKuZaS8LnzxPZc8pW+ZPWbUu6LAVSZ87791Dz7RxV5K0MsQsP8Iiqq8VFdKQ==}
+  '@adguard/agtree@2.2.0':
+    resolution: {integrity: sha512-Mct4dTfaetp26e+DlgnTf7N8RUvN5SrVigjrmgOEEWiB3l4nEX3u7vQntSlfWszeAyRjw7GjfuNASezFt4zfHA==}
     engines: {node: '>=18'}
 
   '@adguard/css-tokenizer@1.1.1':
@@ -165,8 +165,8 @@ packages:
   '@types/mute-stream@0.0.4':
     resolution: {integrity: sha512-CPM9nzrCPPJHQNA9keH9CVkVI+WR5kMa+7XEs5jcGQ0VoAGnLv242w8lIVgwAEfmE4oufJRaTc9PNLQl0ioAow==}
 
-  '@types/node@20.17.7':
-    resolution: {integrity: sha512-sZXXnpBFMKbao30dUAvzKbdwA2JM1fwUtVEq/kxKuPI5mMwZiRElCpTXb0Biq/LMEVpXDZL5G5V0RPnxKeyaYg==}
+  '@types/node@20.17.9':
+    resolution: {integrity: sha512-0JOXkRyLanfGPE2QRCwgxhzlBAvaRdCNMcvbd7jFfpmD4eEXll7LRwy5ymJmyeZqk7Nh7eD2LeUyQ68BbndmXw==}
 
   '@types/parse-json@4.0.2':
     resolution: {integrity: sha512-dISoDXWWQwUquiKsyZ4Ng+HX2KsPL7LyHKHQwgGFEA3IaKac4Obd+h2a/a6waisAoepJlBcx9paWqjA8/HVjCw==}
@@ -686,15 +686,15 @@ packages:
   tldts-core@5.7.112:
     resolution: {integrity: sha512-mutrEUgG2sp0e/MIAnv9TbSLR0IPbvmAImpzqul5O/HJ2XM1/I1sajchQ/fbj0fPdA31IiuWde8EUhfwyldY1Q==}
 
-  tldts-core@6.1.64:
-    resolution: {integrity: sha512-uqnl8vGV16KsyflHOzqrYjjArjfXaU6rMPXYy2/ZWoRKCkXtghgB4VwTDXUG+t0OTGeSewNAG31/x1gCTfLt+Q==}
+  tldts-core@6.1.65:
+    resolution: {integrity: sha512-Uq5t0N0Oj4nQSbU8wFN1YYENvMthvwU13MQrMJRspYCGLSAZjAfoBOJki5IQpnBM/WFskxxC/gIOTwaedmHaSg==}
 
   tldts@5.7.112:
     resolution: {integrity: sha512-6VSJ/C0uBtc2PQlLsp4IT8MIk2UUh6qVeXB1HZtK+0HiXlAPzNcfF3p2WM9RqCO/2X1PIa4danlBLPoC2/Tc7A==}
     hasBin: true
 
-  tldts@6.1.64:
-    resolution: {integrity: sha512-ph4AE5BXWIOsSy9stpoeo7bYe/Cy7VfpciIH4RhVZUPItCJmhqWCN0EVzxd8BOHiyNb42vuJc6NWTjJkg91Tuw==}
+  tldts@6.1.65:
+    resolution: {integrity: sha512-xU9gLTfAGsADQ2PcWee6Hg8RFAv0DnjMGVJmDnUmI8a9+nYmapMQix4afwrdaCtT+AqP4MaxEzu7cCrYmBPbzQ==}
     hasBin: true
 
   to-regex-range@5.0.1:
@@ -770,7 +770,7 @@ snapshots:
 
   '@adguard/aglint@2.1.2':
     dependencies:
-      '@adguard/agtree': 2.1.3
+      '@adguard/agtree': 2.2.0
       '@adguard/ecss-tree': 1.1.0
       '@inquirer/checkbox': 1.5.2
       '@inquirer/select': 1.3.3
@@ -798,7 +798,7 @@ snapshots:
       tldts: 5.7.112
       xregexp: 5.1.1
 
-  '@adguard/agtree@2.1.3':
+  '@adguard/agtree@2.2.0':
     dependencies:
       '@adguard/css-tokenizer': 1.1.1
       clone-deep: 4.0.1
@@ -807,7 +807,6 @@ snapshots:
       semver: 7.6.3
       sprintf-js: 1.1.3
       tldts: 5.7.112
-      xregexp: 5.1.1
       zod: 3.21.4
 
   '@adguard/css-tokenizer@1.1.1': {}
@@ -818,7 +817,7 @@ snapshots:
       consola: 3.2.3
       glob: 10.4.5
       node-fetch: 2.7.0
-      tldts: 6.1.64
+      tldts: 6.1.65
       yargs: 17.7.2
     transitivePeerDependencies:
       - encoding
@@ -835,7 +834,7 @@ snapshots:
 
   '@adguard/scriptlets@1.12.1':
     dependencies:
-      '@adguard/agtree': 2.1.3
+      '@adguard/agtree': 2.2.0
       '@babel/runtime': 7.26.0
       js-yaml: 3.14.1
 
@@ -903,7 +902,7 @@ snapshots:
     dependencies:
       '@inquirer/type': 1.5.5
       '@types/mute-stream': 0.0.4
-      '@types/node': 20.17.7
+      '@types/node': 20.17.9
       '@types/wrap-ansi': 3.0.0
       ansi-escapes: 4.3.2
       chalk: 4.1.2
@@ -954,9 +953,9 @@ snapshots:
 
   '@types/mute-stream@0.0.4':
     dependencies:
-      '@types/node': 20.17.7
+      '@types/node': 20.17.9
 
-  '@types/node@20.17.7':
+  '@types/node@20.17.9':
     dependencies:
       undici-types: 6.19.8
 
@@ -1414,15 +1413,15 @@ snapshots:
 
   tldts-core@5.7.112: {}
 
-  tldts-core@6.1.64: {}
+  tldts-core@6.1.65: {}
 
   tldts@5.7.112:
     dependencies:
       tldts-core: 5.7.112
 
-  tldts@6.1.64:
+  tldts@6.1.65:
     dependencies:
-      tldts-core: 6.1.64
+      tldts-core: 6.1.65
 
   to-regex-range@5.0.1:
     dependencies:
