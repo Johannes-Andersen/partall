@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@adguard/aglint':
-        specifier: 2.1.2
-        version: 2.1.2
+        specifier: 2.1.3
+        version: 2.1.3
       '@adguard/dead-domains-linter':
         specifier: 1.0.19
         version: 1.0.19
@@ -26,8 +26,8 @@ importers:
 
 packages:
 
-  '@adguard/aglint@2.1.2':
-    resolution: {integrity: sha512-DG4l7eFw4EUh3ikfrZnOfo+mVI7WXbovIkWHPoouT4LhNMmNIKUxz6XlBle3iRperB9xBF6jFanhdir9mD4gAw==}
+  '@adguard/aglint@2.1.3':
+    resolution: {integrity: sha512-n5GQ6cCblGuzNZHgonCmswMqWDUsct2uDAsSNtdD5oJCZZcALYLj8mD0PgyGRy2XpXkMjwU4gItO58I9Pyyq6w==}
     engines: {node: '>=17'}
     hasBin: true
 
@@ -37,6 +37,10 @@ packages:
 
   '@adguard/agtree@2.2.0':
     resolution: {integrity: sha512-Mct4dTfaetp26e+DlgnTf7N8RUvN5SrVigjrmgOEEWiB3l4nEX3u7vQntSlfWszeAyRjw7GjfuNASezFt4zfHA==}
+    engines: {node: '>=18'}
+
+  '@adguard/agtree@2.3.0':
+    resolution: {integrity: sha512-MeaTncLxXh/ERIXYAOZMEG7TTtYfxyGPIwS4Eb6sqM3kvgaCsIKRAOEDqbMHaYrtR9KBX+l5MlsdTKdkaD3SgA==}
     engines: {node: '>=18'}
 
   '@adguard/css-tokenizer@1.1.1':
@@ -768,9 +772,9 @@ packages:
 
 snapshots:
 
-  '@adguard/aglint@2.1.2':
+  '@adguard/aglint@2.1.3':
     dependencies:
-      '@adguard/agtree': 2.2.0
+      '@adguard/agtree': 2.3.0
       '@adguard/ecss-tree': 1.1.0
       '@inquirer/checkbox': 1.5.2
       '@inquirer/select': 1.3.3
@@ -799,6 +803,17 @@ snapshots:
       xregexp: 5.1.1
 
   '@adguard/agtree@2.2.0':
+    dependencies:
+      '@adguard/css-tokenizer': 1.1.1
+      clone-deep: 4.0.1
+      is-ip: 3.1.0
+      json5: 2.2.3
+      semver: 7.6.3
+      sprintf-js: 1.1.3
+      tldts: 5.7.112
+      zod: 3.21.4
+
+  '@adguard/agtree@2.3.0':
     dependencies:
       '@adguard/css-tokenizer': 1.1.1
       clone-deep: 4.0.1
