@@ -24,7 +24,7 @@ jobs:
         run: pnpm install --frozen-lockfile --prefer-offline
 
       - name: Setup Biome
-        uses: biomejs/setup-biome@1cbe33ead22c7a2fded3b52fa2893611c815c9b5 # v2
+        uses: biomejs/setup-biome@c016c38f26f2c4a6eb3662679143614a254263fd # v2
 
       - name: Run filters lint
         run: pnpm run lint:filters
