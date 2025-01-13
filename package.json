@@ -28,7 +28,7 @@
     "@adguard/dead-domains-linter": "1.0.22",
     "@adguard/diff-builder": "1.0.18",
     "@biomejs/biome": "1.9.4",
-    "codeowners-generator": "2.4.1"
+    "codeowners-generator": "2.5.0"
   },
   "codeowners-generator": {
     "includes": ["**/CODEOWNERS"],

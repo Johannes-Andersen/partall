@@ -21,8 +21,8 @@ importers:
         specifier: 1.9.4
         version: 1.9.4
       codeowners-generator:
-        specifier: 2.4.1
-        version: 2.4.1
+        specifier: 2.5.0
+        version: 2.5.0
 
 packages:
 
@@ -251,8 +251,8 @@ packages:
     resolution: {integrity: sha512-JQHZ2QMW6l3aH/j6xCqQThY/9OH4D/9ls34cgkUBiEeocRTU04tHfKPBsUK1PqZCUQM7GiA0IIXJSuXHI64Kbg==}
     engines: {node: '>=0.8'}
 
-  codeowners-generator@2.4.1:
-    resolution: {integrity: sha512-DTDUq00qAez/9I+nnBRoUk0AzhgEr5r/Ev4Jps/htBaR52Nk2hPEl+zqF/hkY51kxEjJt+mY1rkOT9QlbbnftA==}
+  codeowners-generator@2.5.0:
+    resolution: {integrity: sha512-V+J2bqqJtAPIprA0aPhaoPQ1AhsZl8ojgG0bKS9fCdfDWT/P4+MO5qJIbe8wrGCpku+DYjovCQZ6l3Nc+3GK2Q==}
     engines: {node: '>10.0.0'}
     hasBin: true
 
@@ -1035,7 +1035,7 @@ snapshots:
 
   clone@1.0.4: {}
 
-  codeowners-generator@2.4.1:
+  codeowners-generator@2.5.0:
     dependencies:
       commander: 7.2.0
       common-tags: 1.8.2
