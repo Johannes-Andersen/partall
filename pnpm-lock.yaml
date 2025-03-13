@@ -15,8 +15,8 @@ importers:
         specifier: 1.0.22
         version: 1.0.22
       '@adguard/diff-builder':
-        specifier: 1.0.18
-        version: 1.0.18
+        specifier: 1.1.0
+        version: 1.1.0
       '@biomejs/biome':
         specifier: 1.9.4
         version: 1.9.4
@@ -47,8 +47,8 @@ packages:
     engines: {node: '>=18'}
     hasBin: true
 
-  '@adguard/diff-builder@1.0.18':
-    resolution: {integrity: sha512-VTaApBCbRUKpBQ7nyDguaIaahg6lkl/IZos1kjjUHBCPji0fDruzTuYm/GOiDJHsGaPlyL8orLmKjJnvku66FQ==}
+  '@adguard/diff-builder@1.1.0':
+    resolution: {integrity: sha512-2KGzA6vzbwrTX14gopkztdT/5t/pTyf6tn8VQE2EtWlW8n0/j+HG49+CZ/or0nR3IVQi0SNQgfuKIXfz0ReZxQ==}
     hasBin: true
 
   '@adguard/ecss-tree@1.1.0':
@@ -312,11 +312,6 @@ packages:
 
   defaults@1.0.4:
     resolution: {integrity: sha512-eFuaLoy/Rxalv2kr+lqMlUnrDWV+3j4pljOIJgLIhI058IQfWJ7vXhyEIHu+HtC738klGALYxOKDO0bQP3tg8A==}
-
-  diff@https://codeload.github.com/105th/jsdiff/tar.gz/2be2e7df90e8eebd99f0385c7b1dc16c2f4dcc1a:
-    resolution: {tarball: https://codeload.github.com/105th/jsdiff/tar.gz/2be2e7df90e8eebd99f0385c7b1dc16c2f4dcc1a}
-    version: 5.1.1
-    engines: {node: '>=0.3.1'}
 
   eastasianwidth@0.2.0:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
@@ -822,11 +817,10 @@ snapshots:
     transitivePeerDependencies:
       - encoding
 
-  '@adguard/diff-builder@1.0.18':
+  '@adguard/diff-builder@1.1.0':
     dependencies:
       commander: 11.1.0
       crypto-js: 4.2.0
-      diff: https://codeload.github.com/105th/jsdiff/tar.gz/2be2e7df90e8eebd99f0385c7b1dc16c2f4dcc1a
 
   '@adguard/ecss-tree@1.1.0':
     dependencies:
@@ -1095,8 +1089,6 @@ snapshots:
   defaults@1.0.4:
     dependencies:
       clone: 1.0.4
-
-  diff@https://codeload.github.com/105th/jsdiff/tar.gz/2be2e7df90e8eebd99f0385c7b1dc16c2f4dcc1a: {}
 
   eastasianwidth@0.2.0: {}
 
