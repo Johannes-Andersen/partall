@@ -681,15 +681,15 @@ packages:
   tldts-core@5.7.112:
     resolution: {integrity: sha512-mutrEUgG2sp0e/MIAnv9TbSLR0IPbvmAImpzqul5O/HJ2XM1/I1sajchQ/fbj0fPdA31IiuWde8EUhfwyldY1Q==}
 
-  tldts-core@6.1.85:
-    resolution: {integrity: sha512-DTjUVvxckL1fIoPSb3KE7ISNtkWSawZdpfxGxwiIrZoO6EbHVDXXUIlIuWympPaeS+BLGyggozX/HTMsRAdsoA==}
+  tldts-core@6.1.86:
+    resolution: {integrity: sha512-Je6p7pkk+KMzMv2XXKmAE3McmolOQFdxkKw0R8EYNr7sELW46JqnNeTX8ybPiQgvg1ymCoF8LXs5fzFaZvJPTA==}
 
   tldts@5.7.112:
     resolution: {integrity: sha512-6VSJ/C0uBtc2PQlLsp4IT8MIk2UUh6qVeXB1HZtK+0HiXlAPzNcfF3p2WM9RqCO/2X1PIa4danlBLPoC2/Tc7A==}
     hasBin: true
 
-  tldts@6.1.85:
-    resolution: {integrity: sha512-gBdZ1RjCSevRPFix/hpaUWeak2/RNUZB4/8frF1r5uYMHjFptkiT0JXIebWvgI/0ZHXvxaUDDJshiA0j6GdL3w==}
+  tldts@6.1.86:
+    resolution: {integrity: sha512-WMi/OQ2axVTf/ykqCQgXiIct+mSQDFdH2fkwhPwgEwvJ1kSzZRiinb0zF2Xb8u4+OqPChmyI6MEu4EezNJz+FQ==}
     hasBin: true
 
   to-regex-range@5.0.1:
@@ -812,7 +812,7 @@ snapshots:
       consola: 3.2.3
       glob: 10.4.5
       node-fetch: 2.7.0
-      tldts: 6.1.85
+      tldts: 6.1.86
       yargs: 17.7.2
     transitivePeerDependencies:
       - encoding
@@ -1405,15 +1405,15 @@ snapshots:
 
   tldts-core@5.7.112: {}
 
-  tldts-core@6.1.85: {}
+  tldts-core@6.1.86: {}
 
   tldts@5.7.112:
     dependencies:
       tldts-core: 5.7.112
 
-  tldts@6.1.85:
+  tldts@6.1.86:
     dependencies:
-      tldts-core: 6.1.85
+      tldts-core: 6.1.86
 
   to-regex-range@5.0.1:
     dependencies:
